@@ -1,6 +1,15 @@
 # Outline
 
-1. You want to start withsomething engaging and easy that doesn't require any extra reading
+1. What to start with
+   1. Something engaging and easy 
+   2. Possibly that doesn't require any extra reading
+   3. Dive right in. No hello worlds
+   4. Maybe write a tool that makes working with chunks easier
+      1. Byte reading abstraction
+      2. Chained iterators (reimplement built-in .chain())
+      3. .read_exact() is my favorite part of this project
+         1. We can probably make an iterator for this
+         2. Give it a byte slice, get back 4 bytes at a time
 2. Command line arguments
    1. I think this is a better second task since it will require some reading about parsing args
    2. Clap is a good library to start with now that it has StructOpt built in
@@ -29,17 +38,22 @@
    2. If there's something unpleasant about your library, fix it. Make it more pleasant
    3. You'll probably be inspired to add your own features. Stop what you think you should be doing and implement those features
    4. This is definitely the last chapter. End stong.
-10. Finding and using crates (or rolling your own)
+8.  Finding and using crates (or rolling your own)
     1.  clap, read args
         1.  Point to std docs for manual
     2.  anyhow, Box<dyn Error>, Custom error
         1.  Push anyhow. They can learn the downsides on their own.
     3.  crc, read another spec if you're into that sort of thing
-11. Maybe. I haven't decided yet
+9.  Maybe. I haven't decided yet
     1.  There should probably be a real enum somewhere
         1.  These are just fun
         2.  `if let` is super useful to know and easy to forget
-12. Implement an iterator
+10. Implement an iterator
     1.  This is kinda irritating and frequently unnecessary
     2.  I can still mention it as an option
     3.  It's a good thing to learn how to implement because it's a bit more involved.
+11. Macros
+    1.  I think macros are beyond the scope of this book
+    2.  It might be cool to have macro unit tests that look at the structure of their code
+    3.  It would be an example of a macro that the reader can dig into if they want
+    4.  Macro unit tests should probably start commented out

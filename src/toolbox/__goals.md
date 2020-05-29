@@ -33,4 +33,6 @@
    6. They can add any extra they want
    7. They can decide which unit tests start commented out
       1. Or I can do that if they don't care
-
+8. Chapters should stand on their own as much as possible
+   1. There are important dependencies like PNGs needing Chunks
+   2. Aim for one way dependency
