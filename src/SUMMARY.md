@@ -1,6 +1,7 @@
 # Summary
 
-[Notes](./toolbox/notes.md)
+[Goals](./toolbox/__goals.md)
+[Outline](./toolbox/__outline.md)
 
 [Introduction](./_introduction.md)
 
