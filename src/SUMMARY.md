@@ -1,6 +1,6 @@
 # Summary
 
-[Notes](./__notes.md)
+[Notes](./toolbox/notes.md)
 
 [Introduction](./_introduction.md)
 
