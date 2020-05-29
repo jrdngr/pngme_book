@@ -1,0 +1,6 @@
+[book]
+authors = ["Jordan Grace"]
+language = "en"
+multilingual = false
+src = "src"
+title = "PNGme: An intermediate Rust tutorial"
