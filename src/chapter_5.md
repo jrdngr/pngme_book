@@ -2,3 +2,7 @@
 
 ## Assignment
 Put it all together
+
+```rust
+{{#include code/5_commands.rs}}
+```
