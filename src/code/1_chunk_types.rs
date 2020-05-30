@@ -111,9 +111,8 @@ mod assignment_tests {
         let chunk = ChunkType::from_str("Rust").unwrap();
         assert!(!chunk.is_valid());
 
-        let chunk = ChunkType::from_str("Ru1t");
+        let chunk = ChunkType::from_str("Ru5t");
         assert!(chunk.is_err());
-
 
         let bytes = "Rust".as_bytes();
         let bytes = [bytes[0], bytes[1], bytes[2], bytes[3]];
@@ -121,7 +120,7 @@ mod assignment_tests {
         assert!(!chunk.is_valid());
 
         
-        let bytes = "Ru1t".as_bytes();
+        let bytes = "Ru5t".as_bytes();
         let bytes = [bytes[0], bytes[1], bytes[2], bytes[3]];
         let chunk = ChunkType { bytes };
         assert!(!chunk.is_valid());
