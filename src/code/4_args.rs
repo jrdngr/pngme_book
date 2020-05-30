@@ -1,8 +1,3 @@
-use std::path::PathBuf;
-
-use clap::Clap;
-
-#[derive(Clap, Debug)]
 pub enum PngMeArgs {
     Encode(EncodeArgs),
     Decode(DecodeArgs),
@@ -10,9 +5,23 @@ pub enum PngMeArgs {
     Print(PrintArgs),
 }
 
-// Write me!
+pub struct EncodeArgs {
+    pub file: PathBuf,
+    pub chunk: String,
+    pub message: String,
+    pub out: Option<PathBuf>,
+}
 
-#[cfg(test)]
-mod assignment_tests {
-    use super::*;
+pub struct DecodeArgs {
+    pub file: PathBuf,
+    pub chunk: String,
+}
+
+pub struct RemoveArgs {
+    pub file: PathBuf,
+    pub chunk: String,
+}
+
+pub struct PrintArgs {
+    pub file: PathBuf,
 }
