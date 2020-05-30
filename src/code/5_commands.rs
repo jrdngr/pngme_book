@@ -19,3 +19,9 @@ pub fn remove(args: RemoveArgs) -> anyhow::Result<()> {
 pub fn print_chunks(args: PrintArgs) -> anyhow::Result<()> {
     // Write me!
 }
+
+
+#[cfg(test)]
+mod assignment_tests {
+    use super::*;
+}

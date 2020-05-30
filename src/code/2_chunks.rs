@@ -34,6 +34,6 @@ impl fmt::Display for Chunk {
 }
 
 #[cfg(test)]
-mod tests {
+mod assignment_tests {
     use super::*;
 }

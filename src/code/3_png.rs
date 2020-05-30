@@ -45,6 +45,6 @@ impl Png {
 }
 
 #[cfg(test)]
-mod tests {
+mod assignment_tests {
     use super::*;
 }

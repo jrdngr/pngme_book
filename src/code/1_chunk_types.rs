@@ -34,7 +34,7 @@ impl FromStr for ChunkType {
 }
 
 #[cfg(test)]
-mod tests {
+mod assignment_tests {
     use super::*;
 
     #[test]
