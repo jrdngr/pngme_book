@@ -1,8 +1,4 @@
-use std::convert::TryFrom;
-use std::fmt;
-use std::io::{BufReader, Read};
-
-use super::ChunkType;
+use crate::ChunkType;
 
 #[derive(Debug, Clone)]
 pub struct Chunk {

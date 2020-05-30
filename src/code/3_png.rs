@@ -1,50 +1,86 @@
-pub mod chunk;
-
-use std::fmt;
-use std::fs;
-use std::io::{BufReader, Read};
-use std::path::Path;
-use std::str::FromStr;
-
-pub use chunk::{Chunk, ChunkType};
+use crate::Chunk;
+use crate::ChunkType;
 
 #[derive(Debug)]
 pub struct Png {
-    chunks: Vec<Chunk>,
     // Write me!
 }
 
 impl Png {
-    pub fn from_bytes(bytes: &[u8]) -> anyhow::Result<Self> {
-        // Write me!
-    }
+    pub const EXPECTED_HEADER: [u8; 8] = [ /* Fill me in */ ];
 
-    pub fn from_file<P: AsRef<Path>>(path: P) -> anyhow::Result<Self> {
-        // TODO: Hide me
-    }
-
-    pub fn insert_chunk(&mut self, chunk: Chunk) {
-        // Write me!
-    }
-
-    pub fn remove_chunk(&mut self, chunk_type: &str) -> anyhow::Result<Chunk> {
-        // Write me!
-    }
-
-    pub fn chunks(&self) -> &[Chunk] {
-       // Write me!
-    }
-
-    pub fn chunk_by_type(&self, chunk_type: &str) -> Option<&Chunk> {
-        // Write me!
-    }
-
-    pub fn as_bytes(&self) -> Vec<u8> {
-        // Write me!
-    }
+    // Write me!
 }
 
 #[cfg(test)]
 mod assignment_tests {
     use super::*;
+
+    fn testing_chunks() -> Vec<Chunk> {
+        let mut chunks = Vec::new();
+
+        chunks.push(Chunk::from_strings("FrSt", "I am the first chunk").unwrap());
+        chunks.push(Chunk::from_strings("miDl", "I am another chunk").unwrap());
+        chunks.push(Chunk::from_strings("LASt", "I am the last chunk").unwrap());
+
+        chunks
+    }
+
+    #[test]
+    fn test_valid_from_bytes() {
+        let chunk_bytes: Vec<u8> = testing_chunks()
+            .into_iter()
+            .flat_map(|chunk| chunk.as_bytes())
+            .collect();
+
+        let bytes: Vec<u8> = Png::EXPECTED_HEADER
+            .iter()
+            .chain(chunk_bytes.iter())
+            .copied()
+            .collect();
+
+        let png = Png::try_from(bytes.as_ref());
+        
+        assert!(png.is_ok());
+    }
+
+    #[test]
+    fn test_invalid_header() {
+        let chunk_bytes: Vec<u8> = testing_chunks()
+            .into_iter()
+            .flat_map(|chunk| chunk.as_bytes())
+            .collect();
+
+        let bytes: Vec<u8> =[13, 80, 78, 71, 13, 10, 26, 10]
+            .iter()
+            .chain(chunk_bytes.iter())
+            .copied()
+            .collect();
+
+        let png = Png::try_from(bytes.as_ref());
+        
+        assert!(png.is_err());
+    }
+
+    #[test]
+    fn test_invalid_chunk() {
+        let mut chunk_bytes: Vec<u8> = testing_chunks()
+            .into_iter()
+            .flat_map(|chunk| chunk.as_bytes())
+            .collect();
+
+        #[rustfmt::skip]
+        let mut bad_chunk = vec![
+            0, 0, 0, 5,         // length
+            32, 117, 83, 116,   // Chunk Type (bad)
+            65, 64, 65, 66, 67, // Data
+            1, 2, 3, 4, 5       // CRC (bad)
+        ];
+
+        chunk_bytes.append(&mut bad_chunk);
+        
+        let png = Png::try_from(chunk_bytes.as_ref());
+        
+        assert!(png.is_err());
+    }
 }

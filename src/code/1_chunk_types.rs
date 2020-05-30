@@ -1,7 +1,3 @@
-use std::convert::TryFrom;
-use std::fmt;
-use std::str::FromStr;
-
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct ChunkType {
     // Write me!
