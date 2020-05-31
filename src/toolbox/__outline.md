@@ -62,6 +62,7 @@
     1. If you liked implementing a spec
         1. Implement PNG image decoding
         2. CHIP-8
+        3. Add support for other file types
     2. If you liked making a cli tool
         1. Add support for urls/downloading
     3. If you like playing with bytes
