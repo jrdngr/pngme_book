@@ -1,6 +1,10 @@
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::chunk_type::ChunkType;
+    use crate::chunk::Chunk;
+    use std::str::FromStr;
+    use std::convert::TryFrom;
 
     fn testing_chunks() -> Vec<Chunk> {
         let mut chunks = Vec::new();

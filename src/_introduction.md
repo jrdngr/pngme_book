@@ -1,15 +1,19 @@
 # Introduction
 
+"I just finished reading The Book. What should I do next?"
+
+This question comes up weekly in online Rust discussions. The answers to this question are always "Make something!", sometimes followed by a list a cool projects. This is a great answer for some people, but others might be looking for a little more direction. 
+
+This tutorial is intended to fill the gap between heavily directed beginner tutorials and working on your own projects. The primary goal here is to get you writing code. The secondary goal is to get you reading documentation. I'm assuming that you already know how to search the internet for information, so I'm going to give you links to all of the docs that you'll need to complete each chapter.
+
+Unlike many of the other tutorials you might have worked through, I will not be providing any completed code. If you need extra help, there are hints for each chapter along with code stubs that can you get started. The first three chapters come with comprehensive unit tests that will ensure your code has the required features to move on. You'll use that code to complete the remaining chapters.
 
 
+## What are we making?
 
-# Suggested Crates
-1. [anyhow](https://github.com/dtolnay/anyhow)
-2. [crc](https://github.com/mrhooray/crc-rs)
-3. [clap](https://github.com/clap-rs/clap) 
-   * Version `3.0.0-beta.1` has some incredibly convenient derive macros that come from the [structopt](https://github.com/TeXitoi/structopt) crate.
+We're making a command line program that lets you hide messages in PNG files. Your program will have four commands:
 
-
-```rust
-{{#include stubs/main_full.rs}}
-```
+1. Encode a message
+2. Decode a message
+3. Remove a message
+4. Print a list of chunks that can be searched for messages

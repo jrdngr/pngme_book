@@ -1,6 +1,7 @@
 # Summary
 
 [Introduction](./_introduction.md)
+[Setup](./setup.md)
 
 - [Chunk Types](./chapter_1.md)
 - [Chunks](./chapter_2.md)

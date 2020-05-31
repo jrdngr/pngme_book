@@ -1,6 +1,8 @@
 #[cfg(test)]
 mod tests {
     use super::*;
+    use std::convert::TryFrom;
+    use std::str::FromStr;
 
     #[test]
     pub fn test_chunk_type_from_bytes() {

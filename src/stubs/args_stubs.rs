@@ -24,14 +24,20 @@ pub struct PrintArgs {
 }
 
 
-// If you use this structure for your args, you can also use the following main function in main.rs
-fn main() -> Result<()> {
-    let args = todo!();
+// If you use this structure for your args, you can also use the following code in your main.rs
 
-    match args {
-        PngMeArgs::Encode(encode_args) => encode(encode_args),
-        PngMeArgs::Decode(decode_args) => decode(decode_args),
-        PngMeArgs::Remove(remove_args) => remove(remove_args),
-        PngMeArgs::Print(print_args) => print_chunks(print_args),
-    }
+mod args;
+mod chunk;
+mod chunk_type;
+mod commands;
+mod png;
+
+use crate::args::PngMeArgs;
+use crate::commands::{decode, encode, print_chunks, remove};
+
+pub type Error = Box<dyn std::error::Error>;
+pub type Result<T> = std::result::Result<T, Error>;
+
+fn main() -> Result<()> {
+    todo!()
 }
