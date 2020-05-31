@@ -1,7 +1,12 @@
 # Chapter 1
 
+Okay here we go!
+
+
+
+
 ## Assignment
-Using the PNG spec, implement chunk types. This is one of the four pieces of data included in PNG chunk. Don't worry about implementing any of the chunk types specified in the spec. You only need to store a valid PNG chunk type.
+Using the [PNG spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html), implement chunk types. This is one of the four pieces of data included in PNG chunk. Don't worry about implementing any of the chunk types specified in the spec. You only need to store a valid PNG chunk type.
 
 ## Requirements
 1. Copy the code below into your editor.
@@ -22,7 +27,7 @@ Using the PNG spec, implement chunk types. This is one of the four pieces of dat
 * When I'm working directly with bytes, it can be helpful to manually align my code. If you're using `rustfmt`, you can write `#[rustfmt::skip]` above a function to keep your formatting intact.
 
 ## Resources
-* [PNG Spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html)
+* [PNG Spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Contents.html)
 * [std::fmt::Display](https://doc.rust-lang.org/std/fmt/trait.Display.html)
 * [std::convert::TryFrom](https://doc.rust-lang.org/std/convert/trait.TryFrom.html)
 * [std::str::FromStr](https://doc.rust-lang.org/std/str/trait.FromStr.html)

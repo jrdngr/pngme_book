@@ -8,12 +8,16 @@ This tutorial is intended to fill the gap between heavily directed beginner tuto
 
 Unlike many of the other tutorials you might have worked through, I will not be providing any completed code. If you need extra help, there are hints for each chapter along with code stubs that can you get started. The first three chapters come with comprehensive unit tests that will ensure your code has the required features to move on. You'll use that code to complete the remaining chapters.
 
+If you haven't read [The Rust Programming Language](https://doc.rust-lang.org/book/) yet, I highly encourage you to do so before attempting this tutorial. I will not be covering the usage of most language features.
+
 
 ## What are we making?
 
 We're making a command line program that lets you hide messages in PNG files. Your program will have four commands:
 
-1. Encode a message
-2. Decode a message
-3. Remove a message
-4. Print a list of chunks that can be searched for messages
+1. Encode a message into a PNG file
+2. Decode a message stored in a PNG file
+3. Remove a message from a PNG file
+4. Print a list of PNG chunks that can be searched for messages
+
+If that sounds scary or beyond your ability then this tutorial is for you. If you know how to program and you know your Rust basics, you can totally do this.
