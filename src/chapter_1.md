@@ -4,7 +4,6 @@
 Using the PNG spec, implement chunk types. This is one of the four pieces of data included in PNG chunk. Don't worry about implementing any of the chunk types specified in the spec. You only need to store a valid PNG chunk type.
 
 ## Requirements
-1. Add the `anyhow` crate to your `Cargo.toml` file.
 1. Copy the code below into your editor.
 2. Fill in the `ChunkType` struct with your implementation.
 3. Implement `TryFrom<[u8; 4]>` for your `ChunkType`.
@@ -30,5 +29,5 @@ Using the PNG spec, implement chunk types. This is one of the four pieces of dat
 
 
 ```rust
-{{#include code/1_chunk_types.rs}}
+{{#include code/src/chunk_type.rs}}
 ```

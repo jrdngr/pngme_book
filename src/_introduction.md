@@ -8,3 +8,7 @@
    1. 3.0.0-beta.1
 2. [crc](https://github.com/mrhooray/crc-rs)
 
+
+```rust
+{{#include code/src/main.rs}}
+```

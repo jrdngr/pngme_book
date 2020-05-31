@@ -5,5 +5,5 @@ Implement PNG chunks.
 
 
 ```rust
-{{#include code/2_chunks.rs}}
+{{#include code/src/chunk.rs}}
 ```
