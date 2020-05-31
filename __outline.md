@@ -31,7 +31,7 @@
       1. Maybe have a unit test that requires it later 
 6. Error handling
    1. I definitely want to show the unwrap/expect -> Result process
-   2. Just make the suggestion  to use expect
+   2. Just make the suggestion to use expect
    3. This is an important shortcut for early development, but make sure you keep Result in mind
 7. Using your own code to make something
    1. The best way to judge whether or not your code is good is to use it to make something

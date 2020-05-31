@@ -7,6 +7,7 @@
 - [Chapter 3 - PNG Files](./chapter_3.md)
 - [Chapter 4 - Command Line Arguments](./chapter_4.md)
 - [Chapter 5 - Using your code to write code](./chapter_5.md)
+- [Chapter 6 - Next Steps](./chapter_6.md)
 
 - [Hints](./hints.md)
   - [Chapter 1 Hints](./hints/chapter_1_hints.md)

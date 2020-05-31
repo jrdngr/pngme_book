@@ -24,15 +24,3 @@
 6. Minimize friction
    1. It should be easy to find the information you need. Let reading the info be the challenge
    2. Unit tests should be plentiful enough that they serve as real useful hints
-7. Add unit tests for different languages
-   1. This would be fun for other people to do
-   2. It's basically an easy open source contribution
-   3. Maybe Takumi will do Kotlin
-   4. This is also a good learning opportunity
-   5. Provide a list of required tests
-   6. They can add any extra they want
-   7. They can decide which unit tests start commented out
-      1. Or I can do that if they don't care
-8. Chapters should stand on their own as much as possible
-   1. There are important dependencies like PNGs needing Chunks
-   2. Aim for one way dependency
