@@ -1,3 +1,4 @@
+use crate::setup::{Error, Result};
 use crate::ChunkType;
 
 #[derive(Debug, Clone)]
@@ -15,9 +16,9 @@ impl Chunk {
 }
 
 impl TryFrom<&[u8]> for Chunk {
-    type Error = anyhow::Error;
+    type Error = Error;
 
-    fn try_from(bytes: &[u8]) -> anyhow::Result<Self> {
+    fn try_from(bytes: &[u8]) -> Result<Self> {
         // Write me!
     }
 }

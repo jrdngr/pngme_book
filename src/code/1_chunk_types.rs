@@ -1,3 +1,5 @@
+use crate::setup::{Error, Reuslt};
+
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct ChunkType {
     // Write me!
@@ -8,9 +10,9 @@ impl ChunkType {
 }
 
 impl TryFrom<[u8; 4]> for ChunkType {
-    type Error = anyhow::Error;
+    type Error = Error;
 
-    fn try_from(bytes: [u8; 4]) -> anyhow::Result<Self> {
+    fn try_from(bytes: [u8; 4]) -> Result<Self> {
         // Write me!
     }
 }
@@ -22,9 +24,9 @@ impl fmt::Display for ChunkType {
 }
 
 impl FromStr for ChunkType {
-    type Err = anyhow::Error;
+    type Err = Error;
 
-    fn from_str(s: &str) -> anyhow::Result<Self> {
+    fn from_str(s: &str) -> Result<Self> {
         // Write me!
     }
 }

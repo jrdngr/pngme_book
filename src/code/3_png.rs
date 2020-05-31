@@ -1,3 +1,4 @@
+use crate::{Error, Result};
 use crate::Chunk;
 use crate::ChunkType;
 
