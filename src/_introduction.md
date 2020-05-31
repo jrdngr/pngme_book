@@ -8,5 +8,5 @@
 
 
 ```rust
-{{#include code/src/main.rs}}
+{{#include stubs/main_full.rs}}
 ```
