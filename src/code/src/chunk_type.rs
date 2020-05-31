@@ -37,16 +37,13 @@ impl ChunkType {
         todo!()
     }
 
-    /// Returns true if the reserved byte is valid and all four bytes are represented
-    /// by the characters A-Z or a-z.
+    /// Returns true if the reserved byte is valid and all four bytes are represented by the characters A-Z or a-z.
     /// Note that this chunk type should always be valid as it is validated during construction.
-    #[rustfmt::skip]
     pub fn is_valid(&self) -> bool {
         todo!()
     }
 
     /// Valid bytes are represented by the characters A-Z or a-z
-    #[rustfmt::skip]
     pub fn is_valid_byte(byte: u8) -> bool {
         todo!()
     }

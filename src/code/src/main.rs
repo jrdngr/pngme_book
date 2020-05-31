@@ -1,5 +1,3 @@
-use clap::Clap;
-
 mod args;
 mod chunk;
 mod chunk_type;
@@ -9,13 +7,11 @@ pub mod png;
 use crate::args::PngMeArgs;
 use crate::commands::{decode, encode, print_chunks, remove};
 
-pub use png::Png;
-
 pub type Error = Box<dyn std::error::Error>;
 pub type Result<T> = std::result::Result<T, Error>;
 
 fn main() -> Result<()> {
-    let args = PngMeArgs::parse();
+    let args = todo!();
 
     match args {
         PngMeArgs::Encode(encode_args) => encode(encode_args),

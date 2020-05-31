@@ -19,23 +19,6 @@ impl Chunk {
         todo!()
     }
 
-    /// Since the purpose of this program is to encode messages, it can be useful to 
-    /// create new chunks from a pair of strings representing the chunk type and message.
-    /// 
-    /// # Example
-    ///
-    /// ```
-    /// # fn main() -> Result<(), Box<dyn std::error::Error> {
-    /// let chunk = Chunk::from_strings("RuSt", "This is a secret message!")?;
-    /// 
-    /// assert_eq!(&chunk.chunk_type().to_string(), "RuSt");
-    /// assert_eq!(&chunk.data_as_string()?, "This is a secret message!");
-    /// # }
-    /// ```
-    pub fn from_strings(chunk_type: &str, data: &str) -> Result<Self> {
-        todo!()
-    }
-
     /// The length of the data portion of this chunk.
     pub fn length(&self) -> u32 {
         todo!()
@@ -51,17 +34,8 @@ impl Chunk {
         todo!()
     }
 
-    /// The CRC of this chunk. If this chunk was created with `new` or `from_strings`, 
-    /// the CRC is computed based on the data. If this chunk was created with `TryFrom<&[u8]>`,
-    /// the CRC was read from the bytes per the PNG spec and validated against the data
-    /// stored in this chunk.
+    /// The CRC of this chunk
     pub fn crc(&self) -> u32 {
-        todo!()
-    }
-
-    /// Calculates a new CRC based on the data stored in this chunk. Returns true if the calculated
-    /// CRC matches the stored CRC.
-    pub fn is_crc_valid(&self) -> bool {
         todo!()
     }
 
@@ -72,17 +46,12 @@ impl Chunk {
     }
 
     /// Returns this chunk as a byte sequences described by the PNG spec.
-    /// The following data is included in this byte sequence
+    /// The following data is included in this byte sequence in order:
     /// 1. Length of the data *(4 bytes)*
     /// 2. Chunk type *(4 bytes)*
     /// 3. The data itself *(`length` bytes)*
     /// 4. The CRC of the chunk type and data *(4 bytes)*
     pub fn as_bytes(&self) -> Vec<u8> {
-        todo!()
-    }
-
-    /// Calculates the CRC of a `ChunkType` followed by some data
-    pub fn calculate_crc(chunk_type: &ChunkType, data: &[u8]) -> u32 {
         todo!()
     }
 }
