@@ -26,6 +26,21 @@ let result = first_collection
 ```
 
 
+## Reading bytes
+
+You can turn a `[u8; 4]` into a `u32` with [u32::from_be_bytes](https://doc.rust-lang.org/std/primitive.u32.html#method.from_be_bytes). The `be` stands for *big endian*.
+
+You can read a fixed number of bytes from a reader using 
+[Read::read_exact](https://doc.rust-lang.org/std/io/trait.Read.html#method.read_exact). Chunks have several different 4-byte sequences.
+
+```rust
+let mut reader = BufReader::new(bytes);
+let mut buffer: [u8; 4] = [0, 0, 0, 0];
+
+reader.read_exact(&mut buffer)?;
+let data_length = u32::from_be_bytes(buffer);
+```
+
 
 ## Stubs
 
