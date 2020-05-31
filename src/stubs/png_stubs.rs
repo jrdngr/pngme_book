@@ -6,9 +6,8 @@ use std::path::Path;
 use std::str::FromStr;
 
 use crate::{Error, Result};
-
-pub use crate::chunk::Chunk;
-pub use crate::chunk_type::ChunkType;
+use crate::chunk::Chunk;
+use crate::chunk_type::ChunkType;
 
 /// A PNG container as described by the PNG spec
 /// http://www.libpng.org/pub/png/spec/1.2/PNG-Contents.html
