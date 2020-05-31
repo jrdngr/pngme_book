@@ -56,4 +56,15 @@
     1.  I think macros are beyond the scope of this book
     2.  It might be cool to have macro unit tests that look at the structure of their code
     3.  It would be an example of a macro that the reader can dig into if they want
+
     4.  Macro unit tests should probably start commented out
+12. What to do next
+    1. If you liked implementing a spec
+        1. Implement PNG image decoding
+        2. CHIP-8
+        3. Add support for other file types
+    2. If you liked making a cli tool
+        1. Add support for urls/downloading
+    3. If you like playing with bytes
+        1. Crypto pals
+        2. CHIP-8
