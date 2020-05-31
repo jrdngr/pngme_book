@@ -29,5 +29,5 @@ Using the PNG spec, implement chunk types. This is one of the four pieces of dat
 
 
 ```rust
-{{#include code/src/chunk_type.rs}}
+{{#include tests/chunk_type_tests.rs}}
 ```

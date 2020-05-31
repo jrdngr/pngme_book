@@ -3,6 +3,3 @@
 ## Assignment
 Add command line arguments.
 
-```rust
-{{#include code/src/args.rs}}
-```

@@ -5,5 +5,5 @@ Implement the PNG container
 
 
 ```rust
-{{#include code/src/png.rs}}
+{{#include tests/png_tests.rs}}
 ```

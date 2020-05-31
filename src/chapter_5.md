@@ -3,6 +3,3 @@
 ## Assignment
 Put it all together
 
-```rust
-{{#include code/src/commands.rs}}
-```
