@@ -9,6 +9,8 @@ Ok maybe it's not that complicated.
 As usual, you can refer to the [PNG file structure spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html)
 to make sure you're doing it right. If you're tired of reading that page, this is the last time you'll have to do it.
 
+When you're done with this chapter, you'll have a nice little library that does everything you need to implement your command line program. This is also the last chapter with unit tests. It's all downhill from here!
+
 
 ## Assignment
 Using the [PNG file structure spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html), implement PNG files.
