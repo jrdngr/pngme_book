@@ -1,6 +1,6 @@
 # Chapter 2
 
-Now that we've got our `ChunkType` struct, we can implement the rest of the our chunks. You'll be using the  [PNG file structure spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html) again. Section `3.2` has all of the information you need.
+Now that we've got our `ChunkType` struct, we can implement the rest of the our chunks. You'll be using the [PNG file structure spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html) again. Section `3.2` has all of the information you need.
 
 The toughest part of this assignment will be creating a chunk from a sequence of bytes using the `TryFrom` trait. Implementing the `as_bytes()` method may also be tricky depending on how much experience you have working with iterators. Check the hints for this chapter if you get stuck.
 
@@ -22,7 +22,7 @@ You need to provide methods that return each of the four pieces of data, the chu
 ## Requirements
 1. Copy the unit tests at the bottom of this page and paste them at the bottom of your `chunk.rs` file.
 2. Write a `Chunk` struct with your implementation of PNG chunks.
-3. Implement `TryFrom<[u8; 4]>` for your `Chunk`.
+3. Implement `TryFrom<&[u8]>` for your `Chunk`.
 4. Implement `Display` for your `ChunkType`.
 5. Required methods:
    1. `fn length(&self) -> u32`

@@ -13,11 +13,15 @@ If you haven't read [The Rust Programming Language](https://doc.rust-lang.org/bo
 
 ## What are we making?
 
-We're making a command line program that lets you hide messages in PNG files. Your program will have four commands:
+We're making a command line program that lets you hide secret messages in PNG files. Your program will have four commands:
 
 1. Encode a message into a PNG file
 2. Decode a message stored in a PNG file
 3. Remove a message from a PNG file
 4. Print a list of PNG chunks that can be searched for messages
 
-If that sounds scary or beyond your ability then this tutorial is for you. If you know how to program and you know your Rust basics, you can totally do this.
+If that sounds scary and beyond your ability then this tutorial is _definitely_ for you. If you know how to program and you know your Rust basics, you can totally do this.
+
+It's important to remember that that this is __your__ project. You can implement it however you want. If you have ideas for cool features, go ahead and write them!
+
+Heck, you might not even need this tutorial. If you want to tackle this whole project yourself, [this page](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html) is all you really need. Go to town.
