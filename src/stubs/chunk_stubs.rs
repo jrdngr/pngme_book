@@ -13,12 +13,6 @@ pub struct Chunk {
 }
 
 impl Chunk {
-    /// Creates a new chunk from a validated `ChunkType` and some data.
-    /// The length and CRC will be computed automatically.
-    pub fn new(chunk_type: ChunkType, data: Vec<u8>) -> Self {
-        todo!()
-    }
-
     /// The length of the data portion of this chunk.
     pub fn length(&self) -> u32 {
         todo!()

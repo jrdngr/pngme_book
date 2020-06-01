@@ -16,17 +16,21 @@ Now let's make some chunks.
 
 
 ## Assignment
-Using the [PNG file structure spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html), implement chunk types. Don't worry about implementing any specific chunk types. You only need to store a valid PNG chunk type. You're not implementing the full chunk object either. We'll do that in the next chapter. This is just the 4 byte chunk type described in section `3.3` of the link above.
+Using the [PNG file structure spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html), implement chunk types. Don't worry about implementing any specific chunk types. You only need to store a valid PNG chunk type. You don't have to implement the full chunk object either. We'll do that in the next chapter. This is just the 4 byte chunk type described in section `3.3` of the link above.
+
+You need to provide methods that return the chunk type in bytes, check the validity of the entire chunk type, and check the special meaning of capitalization for each of the four bytes. Method signatures are provided below.
+
+You will also need to implement a few standard library traits.
 
 
 ## Requirements
-1. Copy the unit tests at the bottom of this page and paste them at the bottom of your `chunk.rs` file.
+1. Copy the unit tests at the bottom of this page and paste them at the bottom of your `chunk_type.rs` file.
 2. Write a `ChunkType` struct with your implementation of PNG chunk types.
 3. Implement `TryFrom<[u8; 4]>` for your `ChunkType`.
 4. Implement `FromStr` for your `ChunkType`.
 5. Implement `Display` for your `ChunkType`.
 6. Required methods:
-   1. `fn bytes(&self) -> &[u8]`
+   1. `fn bytes(&self) -> &[u8; 4]`
    2. `fn is_valid(&self) -> bool`
    3. `fn is_critical(&self) -> bool`
    4. `fn is_public(&self) -> bool`
