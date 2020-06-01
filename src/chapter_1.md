@@ -16,7 +16,7 @@ Now let's make some chunks.
 
 
 ## Assignment
-Using the [PNG file structure spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html), implement chunk types. Don't worry about implementing any specific chunk types. You only need to store a valid PNG chunk type.
+Using the [PNG file structure spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html), implement chunk types. Don't worry about implementing any specific chunk types. You only need to store a valid PNG chunk type. You're not implementing the full chunk object either. We'll do that in the next chapter. This is just the 4 byte chunk type described in section `3.3` of the link above.
 
 
 ## Requirements
