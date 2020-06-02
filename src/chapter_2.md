@@ -34,6 +34,29 @@ You need to provide methods that return each of the four pieces of data, the chu
 6. Pass all of the unit tests.
 
 
+## Resources
+* [PNG Spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Contents.html)
+* [crc](https://github.com/mrhooray/crc-rs)
+* [crc::crc32::checksum_ieee](https://docs.rs/crc/1.8.1/crc/crc32/fn.checksum_ieee.html)
+* [std::fmt::Display](https://doc.rust-lang.org/std/fmt/trait.Display.html)
+* [std::convert::TryFrom](https://doc.rust-lang.org/std/convert/trait.TryFrom.html)
+* [std::vec::Vec](https://doc.rust-lang.org/std/vec/struct.Vec.html)
+* [String::from_utf8](https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8)
+* [str::bytes](https://doc.rust-lang.org/std/primitive.str.html#method.bytes)
+* [str::as_bytes](https://doc.rust-lang.org/std/primitive.str.html#method.as_bytes)
+* [Iterator::chain](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.chain)
+* [Iterator::collect](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.collect)
+* [Iterator::cloned](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.cloned)
+* [Iterator::copied](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.copied)
+* [std::slice::Iter](https://doc.rust-lang.org/std/slice/struct.Iter.html)
+* [std::io::Read](https://doc.rust-lang.org/std/io/trait.Read.html)
+* [Read::read_exact](https://doc.rust-lang.org/std/io/trait.Read.html#method.read_exact)
+* [std::io::BufReader](https://doc.rust-lang.org/std/io/struct.BufReader.html)
+* [u32::from_be_bytes](https://doc.rust-lang.org/std/primitive.u32.html#method.from_be_bytes)
+
+
+## Unit Tests
+
 ```rust
 {{#include tests/chunk_tests.rs}}
 ```

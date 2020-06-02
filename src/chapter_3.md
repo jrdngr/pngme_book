@@ -34,6 +34,22 @@ You need to provide a constructor that takes a list of chunks, methods to append
    7. `fn as_bytes(&self) -> Vec<u8>`
 7. Pass all of the unit tests.
 
+## Resources
+* [PNG Spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Contents.html)
+* [std::fmt::Display](https://doc.rust-lang.org/std/fmt/trait.Display.html)
+* [std::convert::TryFrom](https://doc.rust-lang.org/std/convert/trait.TryFrom.html)
+* [std::convert::AsRef](https://doc.rust-lang.org/std/convert/trait.AsRef.html) 
+* [std::path::Path](https://doc.rust-lang.org/std/path/struct.Path.html)
+* [std::fs::read](https://doc.rust-lang.org/std/fs/fn.read.html)
+* [Iterator::enumerate](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.enumerate)
+* [std::iter::Extend](https://doc.rust-lang.org/std/iter/trait.Extend.html)
+* [std::io::Read](https://doc.rust-lang.org/std/io/trait.Read.html)
+* [Read::read_exact](https://doc.rust-lang.org/std/io/trait.Read.html#method.read_exact)
+* [std::io::BufReader](https://doc.rust-lang.org/std/io/struct.BufReader.html)
+* [u32::from_be_bytes](https://doc.rust-lang.org/std/primitive.u32.html#method.from_be_bytes)
+
+
+## Unit Tests
 
 ```rust
 {{#include tests/png_tests.rs}}

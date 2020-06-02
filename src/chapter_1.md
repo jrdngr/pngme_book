@@ -44,6 +44,11 @@ You will also need to implement a few standard library traits.
 * [std::fmt::Display](https://doc.rust-lang.org/std/fmt/trait.Display.html)
 * [std::convert::TryFrom](https://doc.rust-lang.org/std/convert/trait.TryFrom.html)
 * [std::str::FromStr](https://doc.rust-lang.org/std/str/trait.FromStr.html)
+* [std::str::from_utf8](https://doc.rust-lang.org/std/str/fn.from_utf8.html)
+* [str::as_bytes](https://doc.rust-lang.org/std/primitive.str.html#method.as_bytes)
+* [str::is_ascii](https://doc.rust-lang.org/std/primitive.str.html#method.is_ascii)
+* [u8::is_acsii_lowercase](https://doc.rust-lang.org/std/primitive.u8.html#method.is_ascii_lowercase)
+* [u8::is_acsii_uppercase](https://doc.rust-lang.org/std/primitive.u8.html#method.is_ascii_uppercase)
 
 
 ## Unit Tests

@@ -39,3 +39,11 @@ Add command line argument support. You should have four subcommands each with th
 
 ### Print
 * File path
+
+
+## Resources
+* [std::path::PathBuf](https://doc.rust-lang.org/std/path/struct.PathBuf.html)
+* [clap](https://github.com/clap-rs/clap)
+* [structopt](https://github.com/TeXitoi/structopt)
+* [std::env::args](https://doc.rust-lang.org/stable/std/env/fn.args.html)
+* [Accepting Command Line Arguments](https://doc.rust-lang.org/book/ch12-01-accepting-command-line-arguments.html)

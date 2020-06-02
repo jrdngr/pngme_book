@@ -25,3 +25,14 @@ If that sounds scary and beyond your ability then this tutorial is _definitely_ 
 It's important to remember that that this is __your__ project. You can implement it however you want. If you have ideas for cool features, go ahead and write them!
 
 Heck, you might not even need this tutorial. If you want to tackle this whole project yourself, [this page](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html) is all you really need. Go to town.
+
+
+## Blah blah
+
+This is a project I did one time. It was fun.
+
+CLI apps are good
+
+I'll provide links to the documentation for everything I used in my implementation. 
+
+Dig through the docs a little
