@@ -8,6 +8,8 @@ You can parse command line arguments manually, but I highly recommend that you u
 
 At the time of this writing, `clap` is integrating the derive macros from another fantastic crate called [structopt](https://github.com/TeXitoi/structopt). These macros make it trivial to map arguments to Rust types. You can check out version `3.0.0-beta.1` of `clap` to use these macros, or you can use `structopt`.
 
+I put my argument types in a module called `args`. There aren't any more unit tests so you can put yours wherever your want.
+
 When you're done, you should be able to run your program with commands similar to this:
 
 `pngme encode ./dice.png ruSt "This is a secret message!`
@@ -21,7 +23,11 @@ When you're done, you should be able to run your program with commands similar t
 
 
 ## Assignment
-Add command line argument support. You should have four subcommands each with their own set of parameters.
+Add command line argument support. 
+
+
+## Requirements
+You should have four subcommands each with their own set of parameters.
 
 ### Encode
 * File path
