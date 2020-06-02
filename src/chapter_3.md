@@ -1,4 +1,4 @@
-# Chapter 3
+# Chapter 3 - PNG Files
 
 You're finally ready to implement a full PNG file. It's very complicated.
 

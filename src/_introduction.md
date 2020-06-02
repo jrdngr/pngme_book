@@ -4,10 +4,9 @@
 
 This question comes up weekly in online Rust discussions. The answers to this question are always "Make something!", sometimes followed by a list a cool projects. This is a great answer for some people, but others might be looking for a little more direction. 
 
-This tutorial is intended to fill the gap between heavily directed beginner tutorials and working on your own projects. The primary goal here is to get you writing code. The secondary goal is to get you reading documentation. I'm assuming that you already know how to search the internet for information, so I'm going to give you links to all of the docs that you'll need to complete each chapter.
+This guide is intended to fill the gap between heavily directed beginner tutorials and working on your own projects. The primary goal here is to get you writing code. The secondary goal is to get you reading documentation.
 
-If you haven't read [The Rust Programming Language](https://doc.rust-lang.org/book/) yet, I highly encourage you to do so before attempting this tutorial. I will not be covering the usage of most language features.
-
+If you haven't read [The Rust Programming Language](https://doc.rust-lang.org/book/) yet, I highly encourage you to do so before attempting this project. This guide does not cover any language features.
 
 
 ## What are we making?
@@ -24,7 +23,7 @@ If that sounds scary and beyond your ability then this tutorial is _definitely_ 
 
 ## How this works
 
-Unlike many of the other tutorials you may have worked through, I will not be providing any completed code. If you need extra help, there are hints for each chapter along with code stubs that can you get started. The first three chapters come with comprehensive unit tests that will ensure your code has the features it needs. You can use your unit tested code to complete the remaining chapters.
+Unlike many of the other tutorials you may have worked through, I will not be providing any completed code. If you need extra help, there are hints for each chapter along with code stubs that can you get started. The first three chapters come with comprehensive unit tests that will ensure your code has the features it needs. You'll use your unit tested code to complete the remaining chapters.
 
 This is supposed to be _your_ project, not mine. You can use as much or as little of this material as you want. You know your learning style better than I do, so do what works best for you. You don't need to follow my suggestions or click my links or use my unit tests if you don't want to, but you can always come back to them if you get stuck. 
 

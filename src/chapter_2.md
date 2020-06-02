@@ -1,4 +1,4 @@
-# Chapter 2
+# Chapter 2 - Chunks
 
 Now that we've got our `ChunkType` struct, we can implement the rest of the our chunks. You'll be using the [PNG file structure spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html) again. Section `3.2` has all of the information you need.
 
