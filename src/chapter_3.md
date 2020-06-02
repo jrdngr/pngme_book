@@ -34,6 +34,13 @@ You need to provide a constructor that takes a list of chunks, methods to append
    7. `fn as_bytes(&self) -> Vec<u8>`
 7. Pass all of the unit tests.
 
+
+## Unit Tests
+
+```rust
+{{#include tests/png_tests.rs}}
+```
+
 ## Resources
 * [PNG Spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Contents.html)
 * [std::fmt::Display](https://doc.rust-lang.org/std/fmt/trait.Display.html)
@@ -47,10 +54,3 @@ You need to provide a constructor that takes a list of chunks, methods to append
 * [Read::read_exact](https://doc.rust-lang.org/std/io/trait.Read.html#method.read_exact)
 * [std::io::BufReader](https://doc.rust-lang.org/std/io/struct.BufReader.html)
 * [u32::from_be_bytes](https://doc.rust-lang.org/std/primitive.u32.html#method.from_be_bytes)
-
-
-## Unit Tests
-
-```rust
-{{#include tests/png_tests.rs}}
-```

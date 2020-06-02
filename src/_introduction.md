@@ -6,9 +6,8 @@ This question comes up weekly in online Rust discussions. The answers to this qu
 
 This tutorial is intended to fill the gap between heavily directed beginner tutorials and working on your own projects. The primary goal here is to get you writing code. The secondary goal is to get you reading documentation. I'm assuming that you already know how to search the internet for information, so I'm going to give you links to all of the docs that you'll need to complete each chapter.
 
-Unlike many of the other tutorials you might have worked through, I will not be providing any completed code. If you need extra help, there are hints for each chapter along with code stubs that can you get started. The first three chapters come with comprehensive unit tests that will ensure your code has the required features to move on. You'll use that code to complete the remaining chapters.
-
 If you haven't read [The Rust Programming Language](https://doc.rust-lang.org/book/) yet, I highly encourage you to do so before attempting this tutorial. I will not be covering the usage of most language features.
+
 
 
 ## What are we making?
@@ -20,19 +19,27 @@ We're making a command line program that lets you hide secret messages in PNG fi
 3. Remove a message from a PNG file
 4. Print a list of PNG chunks that can be searched for messages
 
-If that sounds scary and beyond your ability then this tutorial is _definitely_ for you. If you know how to program and you know your Rust basics, you can totally do this.
-
-It's important to remember that that this is __your__ project. You can implement it however you want. If you have ideas for cool features, go ahead and write them!
-
-Heck, you might not even need this tutorial. If you want to tackle this whole project yourself, [this page](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html) is all you really need. Go to town.
+If that sounds scary and beyond your ability then this tutorial is _definitely_ for you. If you know how to program and you know your Rust basics, you can totally do this. We're not going to implement any sort of image decoding. The part of the PNG spec we're tackling is surprisingly simple.
 
 
-## Blah blah
+## How this works
 
-This is a project I did one time. It was fun.
+Unlike many of the other tutorials you may have worked through, I will not be providing any completed code. If you need extra help, there are hints for each chapter along with code stubs that can you get started. The first three chapters come with comprehensive unit tests that will ensure your code has the features it needs. You can use your unit tested code to complete the remaining chapters.
 
-CLI apps are good
+This is supposed to be _your_ project, not mine. You can use as much or as little of this material as you want. You know your learning style better than I do, so do what works best for you. You don't need to follow my suggestions or click my links or use my unit tests if you don't want to, but you can always come back to them if you get stuck. 
 
-I'll provide links to the documentation for everything I used in my implementation. 
+I'll give you links to every standard library function and trait I used in my implementation, but it's up to you to figure out how to use them. While you're reading those docs, dig around a little bit and see what else is available. Rust's standard library types provide a ton of useful functionality and you might like something else more than what I used.
 
-Dig through the docs a little
+If you want a more regimented plan, here it is.
+
+1. Read the intro
+2. Read the requirements 
+3. Copy the unit tests into your project
+4. Read the relevant section of the PNG spec
+5. Write your code and try to pass the tests
+6. If you get stuck, check out the provided list of resources
+7. If you're still stuck, check out the hint page for that chapter
+8. If you can't figure it out, ask the internet. The Rust community is very helpful.
+
+
+If you really really super duper want to see my code, you have to send me your code first. __If you're reading this, I forgot to add contact info.__

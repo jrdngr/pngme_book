@@ -6,6 +6,8 @@ The next three chapters will have you implement a basic PNG file. PNG files are 
 
 In this chapter, we'll be implementing chunk types. These are pretty easy since they're essentially just 4 alphabetic characters. Your chunk types should always be __valid__ chunks. It should not be possible to construct an invalid chunk type using your public interface. The [PNG file structure spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html) will tell what a valid chunk type looks like.
 
+### A little bit about bytes
+
 I keep saying that chunk types are strings, but you'll want to think about them in terms of bytes. If you've never worked directly with bytes before, it's not that scary. If you _have_ worked directly with bytes before, you can skip to the [Assignment](#assignment) section below.
 
 A bit is a `0` or a `1`. A byte is 8 bits. In decimal notation, a byte is a number in the range 0 to 255. You've probably heard that computers only understand 1's and 0's. While that's kinda true, they generally communicate using bytes. In Rust, bytes are represented by the type `u8`.
@@ -39,6 +41,12 @@ You will also need to implement a few standard library traits.
 7. Pass all of the unit tests.
 
 
+## Unit Tests
+
+```rust
+{{#include tests/chunk_type_tests.rs}}
+```
+
 ## Resources
 * [PNG Spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Contents.html)
 * [std::fmt::Display](https://doc.rust-lang.org/std/fmt/trait.Display.html)
@@ -49,10 +57,3 @@ You will also need to implement a few standard library traits.
 * [str::is_ascii](https://doc.rust-lang.org/std/primitive.str.html#method.is_ascii)
 * [u8::is_acsii_lowercase](https://doc.rust-lang.org/std/primitive.u8.html#method.is_ascii_lowercase)
 * [u8::is_acsii_uppercase](https://doc.rust-lang.org/std/primitive.u8.html#method.is_ascii_uppercase)
-
-
-## Unit Tests
-
-```rust
-{{#include tests/chunk_type_tests.rs}}
-```

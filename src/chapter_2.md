@@ -34,6 +34,13 @@ You need to provide methods that return each of the four pieces of data, the chu
 6. Pass all of the unit tests.
 
 
+## Unit Tests
+
+```rust
+{{#include tests/chunk_tests.rs}}
+```
+
+
 ## Resources
 * [PNG Spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Contents.html)
 * [crc](https://github.com/mrhooray/crc-rs)
@@ -54,9 +61,3 @@ You need to provide methods that return each of the four pieces of data, the chu
 * [std::io::BufReader](https://doc.rust-lang.org/std/io/struct.BufReader.html)
 * [u32::from_be_bytes](https://doc.rust-lang.org/std/primitive.u32.html#method.from_be_bytes)
 
-
-## Unit Tests
-
-```rust
-{{#include tests/chunk_tests.rs}}
-```
