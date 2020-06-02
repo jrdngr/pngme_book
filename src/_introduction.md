@@ -32,6 +32,7 @@ I'll give you links to every standard library function and trait I used in my im
 
 If you want a more regimented plan, here it is.
 
+For each chapter:
 1. Read the intro
 2. Read the requirements 
 3. Copy the unit tests into your project
