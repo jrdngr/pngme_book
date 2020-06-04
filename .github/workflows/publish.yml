@@ -18,7 +18,9 @@ jobs:
         uses: actions/checkout@master
       - name: Build
         run: mdbook build -d docs
+      - name: Configure git
+        run: git config --global user.email "github-actions-bot@users.noreply.github.com" && git config --global user.name  "GitHub Actions"
       - name: Commit Changes
         run: git add . && git commit -m "Publishing changes"
       - name: Publish
-        run:  git push --force "https://${GITHUB_TOKEN}@github.com/pngme_book.git" master:master
+        run:  git push --force "https://github.com/pngme_book.git" master:master
