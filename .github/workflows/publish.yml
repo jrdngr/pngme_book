@@ -23,4 +23,4 @@ jobs:
       - name: Commit Changes
         run: git add . && git commit -m "Publishing changes"
       - name: Publish
-        run:  git push --force "https://github.com/pngme_book.git" master:master
+        run:  git push "https://github.com/picklenerd/pngme_book"
