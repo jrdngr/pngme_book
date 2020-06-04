@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - master
+  pull_request: 
+    branches:
+      - master
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Downloading mdbook
+        run: >
+        wget -q -O - 
+        "https://github.com/rust-lang/mdBook/releases/download/v0.3.7/mdbook-v0.3.7-x86_64-unknown-linux-gnu.tar.gz"
+        | tar xzf - -C /usr/local/bin
+      - name: Checking out
+        uses: actions/checkout@master
+      - name: Build
+        run: mdbook build -d docs
+      - name: Commit Changes
+        run: git add . && git commit -m "Publishing changes"
+      - name: Publish
+        run:  git push --force "https://${GITHUB_TOKEN}@github.com/pngme_book.git" master:master
