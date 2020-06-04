@@ -42,4 +42,4 @@ For each chapter:
 8. If you can't figure it out, ask the internet. The Rust community is very helpful.
 
 
-If you really really super duper want to see my code, you have to [send me your code](https://twitter.com/picklenrd) first.
+If you really really super duper want to see my code, [send me your code](https://twitter.com/picklenrd) first.
