@@ -18,6 +18,7 @@ So what's next?
  2. Add support for URL inputs and downloading images from the internet
  3. Add support for other file types
     * [Chunk-based file formats](https://en.wikipedia.org/wiki/File_format#Chunk-based_formats)
+ 4. Figure out a way to encrypt or obfuscate hidden messages
 
 
 ## If you liked implementing a spec
