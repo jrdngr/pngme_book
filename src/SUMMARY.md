@@ -1,6 +1,6 @@
 # Summary
 
-[Introduction](./_introduction.md)
+[Introduction](./introduction.md)
 [Setup](./setup.md)
 
 - [Chunk Types](./chapter_1.md)
