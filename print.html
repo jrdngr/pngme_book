@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="_introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="setup.html">Setup</a></li><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chunk Types</a></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Chunks</a></li><li class="chapter-item expanded "><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> PNG Files</a></li><li class="chapter-item expanded "><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Command Line Arguments</a></li><li class="chapter-item expanded "><a href="chapter_5.html"><strong aria-hidden="true">5.</strong> Using your code to write code</a></li><li class="chapter-item expanded "><a href="chapter_6.html"><strong aria-hidden="true">6.</strong> Next Steps</a></li><li class="chapter-item expanded "><a href="hints.html"><strong aria-hidden="true">7.</strong> Hints</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hints/chapter_1_hints.html"><strong aria-hidden="true">7.1.</strong> Chapter 1 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_2_hints.html"><strong aria-hidden="true">7.2.</strong> Chapter 2 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_3_hints.html"><strong aria-hidden="true">7.3.</strong> Chapter 3 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_4_hints.html"><strong aria-hidden="true">7.4.</strong> Chapter 4 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_5_hints.html"><strong aria-hidden="true">7.5.</strong> Chapter 5 Hints</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="_introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="setup.html">Setup</a></li><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chunk Types</a></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Chunks</a></li><li class="chapter-item expanded "><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> PNG Files</a></li><li class="chapter-item expanded "><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Command Line Arguments</a></li><li class="chapter-item expanded "><a href="chapter_5.html"><strong aria-hidden="true">5.</strong> Using Your Code to Write More Code</a></li><li class="chapter-item expanded "><a href="chapter_6.html"><strong aria-hidden="true">6.</strong> Next Steps</a></li><li class="chapter-item expanded "><a href="hints.html"><strong aria-hidden="true">7.</strong> Hints</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hints/chapter_1_hints.html"><strong aria-hidden="true">7.1.</strong> Chapter 1 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_2_hints.html"><strong aria-hidden="true">7.2.</strong> Chapter 2 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_3_hints.html"><strong aria-hidden="true">7.3.</strong> Chapter 3 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_4_hints.html"><strong aria-hidden="true">7.4.</strong> Chapter 4 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_5_hints.html"><strong aria-hidden="true">7.5.</strong> Chapter 5 Hints</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -150,7 +150,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
-<p>&quot;I just finished reading The Book. What should I do next?&quot;</p>
+<p>&quot;I just finished reading <a href="https://doc.rust-lang.org/book/">The Book</a>. What should I do next?&quot;</p>
 <p>This question comes up weekly in online Rust discussions. The answers to this question are always &quot;Make something!&quot;, sometimes followed by a list a cool projects. This is a great answer for some people, but others might be looking for a little more direction. </p>
 <p>This guide is intended to fill the gap between heavily directed beginner tutorials and working on your own projects. The primary goal here is to get you writing code. The secondary goal is to get you reading documentation.</p>
 <p>If you haven't read <a href="https://doc.rust-lang.org/book/">The Rust Programming Language</a> yet, I highly encourage you to do so before attempting this project. This guide does not cover any language features.</p>
@@ -162,11 +162,11 @@
 <li>Remove a message from a PNG file</li>
 <li>Print a list of PNG chunks that can be searched for messages</li>
 </ol>
-<p>If that sounds scary and beyond your ability then this guide is <em>definitely</em> for you. If you know how to program and you know your Rust basics, you can totally do this. We're not going to implement any sort of image decoding. The part of the PNG spec we're tackling is surprisingly simple.</p>
+<p>If that sounds scary and beyond your ability then this guide is <em>definitely</em> for you. If you know how to write code and you know your Rust basics, you can totally do this. We're not going to implement any sort of image decoding. The part of the PNG spec we're tackling is surprisingly simple.</p>
 <h2><a class="header" href="#how-this-works" id="how-this-works">How this works</a></h2>
 <p>Unlike many of the other tutorials you may have worked through, I will not be providing any completed code. If you need extra help, there are hints for each chapter along with code stubs that can you get started. The first three chapters come with comprehensive unit tests that will ensure your code has the features it needs. You'll use your unit tested code to complete the remaining chapters.</p>
 <p>This is supposed to be <em>your</em> project, not mine. You can use as much or as little of this material as you want. You know your learning style better than I do, so do what works best for you. You don't need to follow my suggestions or click my links or use my unit tests if you don't want to, but you can always come back to them if you get stuck. </p>
-<p>I'll give you links to every standard library function and trait I used in my implementation, but it's up to you to figure out how to use them. While you're reading those docs, dig around a little bit and see what else is available. Rust's standard library types provide a ton of useful functionality and you might like something else more than what I used.</p>
+<p>I'll give you links to documentation for everything I used in my own implementation of this project, but it's up to you to figure out how to use what you've read. While you're reading those docs, dig around a little bit and see what else is available. Rust's standard library types provide a ton of useful functionality and you might like something else more than what I linked.</p>
 <p>If you want a more regimented plan, here it is.</p>
 <p>For each chapter:</p>
 <ol>
@@ -179,7 +179,8 @@
 <li>If you're still stuck, check out the hint page for that chapter</li>
 <li>If you can't figure it out, ask the internet. The Rust community is very helpful.</li>
 </ol>
-<p>If you really really super duper want to see my code, <a href="https://twitter.com/picklenrd">send me your code</a> first.</p>
+<p>Each chapter is already laid out in this order so it should be easy to follow.</p>
+<p>If you really really super duper want to see my code, you're gonna have to <a href="https://twitter.com/picklenrd">send me your code</a> first.</p>
 <h1><a class="header" href="#setup" id="setup">Setup</a></h1>
 <p>Create a new binary project using <code>cargo new --bin pngme</code>. My implementation is called <code>pngme</code> because I think I'm clever. Feel free to name yours whatever you want.</p>
 <p>Copy the following code into your <code>main.rs</code> file.</p>
@@ -196,9 +197,9 @@ fn main() -&gt; Result&lt;()&gt; {
     todo!()
 }
 </code></pre></pre>
-<p>Your project will need to match this module structure in order to for the unit tests to pass. The easiest way to set this up is to make a separate file for each module. For example, create a file called <code>chunk.rs</code> in your <code>src</code> folder. The code in this file will be your <code>chunk</code> module. See the <a href="https://doc.rust-lang.org/book/ch07-05-separating-modules-into-different-files.html.">module chapters</a> in the book for more info.</p>
+<p>Your project will need to match this module structure in order to for the unit tests to pass. The easiest way to set this up is to make a separate file for each module. For example, create a file called <code>chunk.rs</code> in your <code>src</code> folder. The code in this file will be your <code>chunk</code> module. See the <a href="https://doc.rust-lang.org/book/ch07-05-separating-modules-into-different-files.html">module chapters</a> in the book for more info.</p>
 <p>I've provided <code>Error</code> and <code>Result</code> type aliases that will make it easy to use the <code>?</code> operator in your code. My own implementation uses the <a href="https://github.com/dtolnay/anyhow">anyhow</a> crate for error handling. It's got some nice macros like <code>bail!</code> that make it easy to return errors in the middle of a function. If you're reading this in the future, we've all probably moved on from <code>anyhow</code> to some other fancy error handling crate. You do you.</p>
-<h1><a class="header" href="#chapter-1---chunk-types" id="chapter-1---chunk-types">Chapter 1 - Chunk Types</a></h1>
+<h1><a class="header" href="#chapter-1-chunk-types" id="chapter-1-chunk-types">Chapter 1: Chunk Types</a></h1>
 <p>Okay here we go!</p>
 <p>The next three chapters will have you implement a basic PNG file. PNG files are essentially just a list of &quot;chunks&quot;, each containing their own data. Each chunk has a type that can be represented as a 4 character string. There are standard chunk types for things like image data, but there's no rule that would prevent you from inserting your own chunks with whatever data you want. We can even tell PNG decoders to ignore our chunks depending on how we capitalize our chunk types.</p>
 <p>In this chapter, we'll be implementing chunk types. These are pretty easy since they're essentially just 4 alphabetic characters. Your chunk types should always be <strong>valid</strong> chunks. It should not be possible to construct an invalid chunk type using your public interface. The <a href="http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html">PNG file structure spec</a> will tell what a valid chunk type looks like.</p>
@@ -213,7 +214,7 @@ fn main() -&gt; Result&lt;()&gt; {
 <p>You will also need to implement a few standard library traits.</p>
 <h2><a class="header" href="#requirements" id="requirements">Requirements</a></h2>
 <ol>
-<li>Copy the unit tests at the bottom of this page and paste them at the bottom of your <code>chunk_type.rs</code> file.</li>
+<li>Copy the unit tests below and paste them at the bottom of your <code>chunk_type.rs</code> file.</li>
 <li>Write a <code>ChunkType</code> struct with your implementation of PNG chunk types.</li>
 <li>Implement <code>TryFrom&lt;[u8; 4]&gt;</code> for your <code>ChunkType</code>.</li>
 <li>Implement <code>FromStr</code> for your <code>ChunkType</code>.</li>
@@ -338,7 +339,7 @@ mod tests {
 <li><a href="https://doc.rust-lang.org/std/primitive.u8.html#method.is_ascii_lowercase">u8::is_acsii_lowercase</a></li>
 <li><a href="https://doc.rust-lang.org/std/primitive.u8.html#method.is_ascii_uppercase">u8::is_acsii_uppercase</a></li>
 </ul>
-<h1><a class="header" href="#chapter-2---chunks" id="chapter-2---chunks">Chapter 2 - Chunks</a></h1>
+<h1><a class="header" href="#chapter-2-chunks" id="chapter-2-chunks">Chapter 2: Chunks</a></h1>
 <p>Now that we've got our <code>ChunkType</code> struct, we can implement the rest of the our chunks. You'll be using the <a href="http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html">PNG file structure spec</a> again. Section <code>3.2</code> has all of the information you need.</p>
 <p>The toughest part of this assignment will be creating a chunk from a sequence of bytes using the <code>TryFrom</code> trait. Implementing the <code>as_bytes()</code> method may also be tricky depending on how much experience you have working with iterators. Check the hints for this chapter if you get stuck.</p>
 <h3><a class="header" href="#calculating-the-crc" id="calculating-the-crc">Calculating the CRC</a></h3>
@@ -350,7 +351,7 @@ Your chunks should contain the four pieces of data laid out in section <code>3.2
 <p>You need to provide methods that return each of the four pieces of data, the chunk data interpreted as a string if it is valid UTF-8 (or an error otherwise), and the entire chunk as a sequence of bytes in the order required by the PNG spec. Method signatures are provided below.</p>
 <h2><a class="header" href="#requirements-1" id="requirements-1">Requirements</a></h2>
 <ol>
-<li>Copy the unit tests at the bottom of this page and paste them at the bottom of your <code>chunk.rs</code> file.</li>
+<li>Copy the unit tests below and paste them at the bottom of your <code>chunk.rs</code> file.</li>
 <li>Write a <code>Chunk</code> struct with your implementation of PNG chunks.</li>
 <li>Implement <code>TryFrom&lt;&amp;[u8]&gt;</code> for your <code>Chunk</code>.</li>
 <li>Implement <code>Display</code> for your <code>ChunkType</code>.</li>
@@ -477,11 +478,11 @@ mod tests {
 <li><a href="https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.copied">Iterator::copied</a></li>
 <li><a href="https://doc.rust-lang.org/std/slice/struct.Iter.html">std::slice::Iter</a></li>
 <li><a href="https://doc.rust-lang.org/std/io/trait.Read.html">std::io::Read</a></li>
-<li><a href="https://doc.rust-lang.org/std/io/trait.Read.html#method.read_exact">Read::read_exact</a></li>
 <li><a href="https://doc.rust-lang.org/std/io/struct.BufReader.html">std::io::BufReader</a></li>
+<li><a href="https://doc.rust-lang.org/std/io/trait.Read.html#method.read_exact">Read::read_exact</a></li>
 <li><a href="https://doc.rust-lang.org/std/primitive.u32.html#method.from_be_bytes">u32::from_be_bytes</a></li>
 </ul>
-<h1><a class="header" href="#chapter-3---png-files" id="chapter-3---png-files">Chapter 3 - PNG Files</a></h1>
+<h1><a class="header" href="#chapter-3-png-files" id="chapter-3-png-files">Chapter 3: PNG Files</a></h1>
 <p>You're finally ready to implement a full PNG file. It's very complicated.</p>
 <p>First you need a header containing 8 bytes that are always the same. Then you need a list of chunks.</p>
 <p>Ok maybe it's not that complicated.</p>
@@ -493,7 +494,7 @@ to make sure you're doing it right. If you're tired of reading that page, this i
 <p>You need to provide a constructor that takes a list of chunks, methods to append and remove chunks, and methods that return the header, a slice of all chunks, and the entire PNG file as a <code>Vec&lt;u8&gt;</code> of bytes.</p>
 <h2><a class="header" href="#requirements-2" id="requirements-2">Requirements</a></h2>
 <ol>
-<li>Copy the unit tests at the bottom of this page and paste them at the bottom of your <code>png.rs</code> file.</li>
+<li>Copy the unit tests below and paste them at the bottom of your <code>png.rs</code> file.</li>
 <li>Write a <code>Png</code> struct with your implementation of PNG files.</li>
 <li>In your <code>impl</code> block, add a public constant called <code>STANDARD_HEADER</code> that has the 8 standard header bytes.</li>
 <li>Implement <code>TryFrom&lt;&amp;[u8]&gt;</code> for your <code>Png</code>.</li>
@@ -922,14 +923,14 @@ mod tests {
 <li><a href="https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.enumerate">Iterator::enumerate</a></li>
 <li><a href="https://doc.rust-lang.org/std/iter/trait.Extend.html">std::iter::Extend</a></li>
 <li><a href="https://doc.rust-lang.org/std/io/trait.Read.html">std::io::Read</a></li>
-<li><a href="https://doc.rust-lang.org/std/io/trait.Read.html#method.read_exact">Read::read_exact</a></li>
 <li><a href="https://doc.rust-lang.org/std/io/struct.BufReader.html">std::io::BufReader</a></li>
+<li><a href="https://doc.rust-lang.org/std/io/trait.Read.html#method.read_exact">Read::read_exact</a></li>
 <li><a href="https://doc.rust-lang.org/std/primitive.u32.html#method.from_be_bytes">u32::from_be_bytes</a></li>
 </ul>
-<h1><a class="header" href="#chapter-4---command-line-arguments" id="chapter-4---command-line-arguments">Chapter 4 - Command Line Arguments</a></h1>
+<h1><a class="header" href="#chapter-4-command-line-arguments" id="chapter-4-command-line-arguments">Chapter 4: Command Line Arguments</a></h1>
 <p>If you made it this far, the hard part is over. Congrats!</p>
 <p>We're going to take a little detour right now and get our command line arguments set up. Having arguments set up will make it really easy to work on the last part of this project.</p>
-<p>You can parse command line arguments manually, but I highly recommend that you use a crate for this. <a href="https://github.com/clap-rs/clap">clap</a> is your best bet for this. It does all of the work to make a nice command line interface for you. All you have to do is get your data out. </p>
+<p>You can parse command line arguments manually, but I highly recommend that you use a crate for this. <a href="https://github.com/clap-rs/clap">clap</a> is your best bet here. It does all of the work to make a nice command line interface for you. All you have to do is get your data out. </p>
 <p>At the time of this writing, <code>clap</code> is integrating the derive macros from another fantastic crate called <a href="https://github.com/TeXitoi/structopt">structopt</a>. These macros make it trivial to map arguments to Rust types. You can check out version <code>3.0.0-beta.1</code> of <code>clap</code> to use these macros, or you can use <code>structopt</code>.</p>
 <p>I put my argument types in a module called <code>args</code>. There aren't any more unit tests so you can put yours wherever your want.</p>
 <p>When you're done, you should be able to run your program with commands similar to this:</p>
@@ -970,7 +971,7 @@ mod tests {
 <li><a href="https://doc.rust-lang.org/book/ch12-01-accepting-command-line-arguments.html">Accepting Command Line Arguments</a></li>
 <li><a href="https://doc.rust-lang.org/std/path/struct.PathBuf.html">std::path::PathBuf</a></li>
 </ul>
-<h1><a class="header" href="#chapter-5---using-your-code-to-write-more-code" id="chapter-5---using-your-code-to-write-more-code">Chapter 5 - Using Your Code to Write More Code</a></h1>
+<h1><a class="header" href="#chapter-5-using-your-code-to-write-more-code" id="chapter-5-using-your-code-to-write-more-code">Chapter 5: Using Your Code to Write More Code</a></h1>
 <p>This is my favorite part.</p>
 <p>We've finished our library code and we've done the busywork to get input from the user via command line arguments. The only thing left to do is glue it all together.</p>
 <p>You're using your own code to write more code here, which means you'll be able to evaluate what you wrote before from the perspective of a user. If you think your library code is annoying to work with, now is the time to revisit it. I like to take a two pronged approach to my APIs. I have the flexible but potentially cumbersome base logic that does all of the heavy lifting, then I add a bunch of nice helper code to make the common use cases easier to work with.</p>
@@ -982,9 +983,9 @@ mod tests {
 <ul>
 <li><a href="https://doc.rust-lang.org/std/fs/index.html">std::fs</a></li>
 </ul>
-<h1><a class="header" href="#chapter-6---next-step" id="chapter-6---next-step">Chapter 6 - Next Step</a></h1>
+<h1><a class="header" href="#chapter-6-next-steps" id="chapter-6-next-steps">Chapter 6: Next Steps</a></h1>
 <p>If you're reading this, hopefully you just got done posting a bunch of inappropriate messages to your company's Slack hidden inside innocent cat pictures. I know that's the first thing I did.</p>
-<p>So what's next?</p>
+<p>So what's next? Here are a few suggestions.</p>
 <h2><a class="header" href="#if-you-want-to-keep-working-on-this-program" id="if-you-want-to-keep-working-on-this-program">If you want to keep working on this program</a></h2>
 <ol>
 <li>Split your code up into a library and binary
@@ -1021,14 +1022,14 @@ mod tests {
 <li>For real, go do this.</li>
 </ul>
 </li>
+<li><a href="https://adventofcode.com/2019">Advent of Code 2019</a> has a really fun sequence of challenges that have you build your own little code interpreter.
+<ul>
+<li>This is more of a guided experience than diving into CHIP-8 if that's your thing</li>
+</ul>
+</li>
 <li>Implement PNG image decoding
 <ul>
 <li>Good luck</li>
-</ul>
-</li>
-<li><a href="https://adventofcode.com/2019">Advent of Code 2019</a> has a really fun sequence of challenges that have you build your own little code interpreter.
-<ul>
-<li>This is more of a guided experience than diving into CHIP-8 if that's your thing </li>
 </ul>
 </li>
 </ol>

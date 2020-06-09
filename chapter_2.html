@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="_introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="setup.html">Setup</a></li><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chunk Types</a></li><li class="chapter-item expanded "><a href="chapter_2.html" class="active"><strong aria-hidden="true">2.</strong> Chunks</a></li><li class="chapter-item expanded "><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> PNG Files</a></li><li class="chapter-item expanded "><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Command Line Arguments</a></li><li class="chapter-item expanded "><a href="chapter_5.html"><strong aria-hidden="true">5.</strong> Using your code to write code</a></li><li class="chapter-item expanded "><a href="chapter_6.html"><strong aria-hidden="true">6.</strong> Next Steps</a></li><li class="chapter-item expanded "><a href="hints.html"><strong aria-hidden="true">7.</strong> Hints</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hints/chapter_1_hints.html"><strong aria-hidden="true">7.1.</strong> Chapter 1 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_2_hints.html"><strong aria-hidden="true">7.2.</strong> Chapter 2 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_3_hints.html"><strong aria-hidden="true">7.3.</strong> Chapter 3 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_4_hints.html"><strong aria-hidden="true">7.4.</strong> Chapter 4 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_5_hints.html"><strong aria-hidden="true">7.5.</strong> Chapter 5 Hints</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="_introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="setup.html">Setup</a></li><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chunk Types</a></li><li class="chapter-item expanded "><a href="chapter_2.html" class="active"><strong aria-hidden="true">2.</strong> Chunks</a></li><li class="chapter-item expanded "><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> PNG Files</a></li><li class="chapter-item expanded "><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Command Line Arguments</a></li><li class="chapter-item expanded "><a href="chapter_5.html"><strong aria-hidden="true">5.</strong> Using Your Code to Write More Code</a></li><li class="chapter-item expanded "><a href="chapter_6.html"><strong aria-hidden="true">6.</strong> Next Steps</a></li><li class="chapter-item expanded "><a href="hints.html"><strong aria-hidden="true">7.</strong> Hints</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hints/chapter_1_hints.html"><strong aria-hidden="true">7.1.</strong> Chapter 1 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_2_hints.html"><strong aria-hidden="true">7.2.</strong> Chapter 2 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_3_hints.html"><strong aria-hidden="true">7.3.</strong> Chapter 3 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_4_hints.html"><strong aria-hidden="true">7.4.</strong> Chapter 4 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_5_hints.html"><strong aria-hidden="true">7.5.</strong> Chapter 5 Hints</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,7 +147,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#chapter-2---chunks" id="chapter-2---chunks">Chapter 2 - Chunks</a></h1>
+                        <h1><a class="header" href="#chapter-2-chunks" id="chapter-2-chunks">Chapter 2: Chunks</a></h1>
 <p>Now that we've got our <code>ChunkType</code> struct, we can implement the rest of the our chunks. You'll be using the <a href="http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html">PNG file structure spec</a> again. Section <code>3.2</code> has all of the information you need.</p>
 <p>The toughest part of this assignment will be creating a chunk from a sequence of bytes using the <code>TryFrom</code> trait. Implementing the <code>as_bytes()</code> method may also be tricky depending on how much experience you have working with iterators. Check the hints for this chapter if you get stuck.</p>
 <h3><a class="header" href="#calculating-the-crc" id="calculating-the-crc">Calculating the CRC</a></h3>
@@ -159,7 +159,7 @@ Your chunks should contain the four pieces of data laid out in section <code>3.2
 <p>You need to provide methods that return each of the four pieces of data, the chunk data interpreted as a string if it is valid UTF-8 (or an error otherwise), and the entire chunk as a sequence of bytes in the order required by the PNG spec. Method signatures are provided below.</p>
 <h2><a class="header" href="#requirements" id="requirements">Requirements</a></h2>
 <ol>
-<li>Copy the unit tests at the bottom of this page and paste them at the bottom of your <code>chunk.rs</code> file.</li>
+<li>Copy the unit tests below and paste them at the bottom of your <code>chunk.rs</code> file.</li>
 <li>Write a <code>Chunk</code> struct with your implementation of PNG chunks.</li>
 <li>Implement <code>TryFrom&lt;&amp;[u8]&gt;</code> for your <code>Chunk</code>.</li>
 <li>Implement <code>Display</code> for your <code>ChunkType</code>.</li>
@@ -286,8 +286,8 @@ mod tests {
 <li><a href="https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.copied">Iterator::copied</a></li>
 <li><a href="https://doc.rust-lang.org/std/slice/struct.Iter.html">std::slice::Iter</a></li>
 <li><a href="https://doc.rust-lang.org/std/io/trait.Read.html">std::io::Read</a></li>
-<li><a href="https://doc.rust-lang.org/std/io/trait.Read.html#method.read_exact">Read::read_exact</a></li>
 <li><a href="https://doc.rust-lang.org/std/io/struct.BufReader.html">std::io::BufReader</a></li>
+<li><a href="https://doc.rust-lang.org/std/io/trait.Read.html#method.read_exact">Read::read_exact</a></li>
 <li><a href="https://doc.rust-lang.org/std/primitive.u32.html#method.from_be_bytes">u32::from_be_bytes</a></li>
 </ul>
 

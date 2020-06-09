@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="_introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="setup.html">Setup</a></li><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chunk Types</a></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Chunks</a></li><li class="chapter-item expanded "><a href="chapter_3.html" class="active"><strong aria-hidden="true">3.</strong> PNG Files</a></li><li class="chapter-item expanded "><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Command Line Arguments</a></li><li class="chapter-item expanded "><a href="chapter_5.html"><strong aria-hidden="true">5.</strong> Using your code to write code</a></li><li class="chapter-item expanded "><a href="chapter_6.html"><strong aria-hidden="true">6.</strong> Next Steps</a></li><li class="chapter-item expanded "><a href="hints.html"><strong aria-hidden="true">7.</strong> Hints</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hints/chapter_1_hints.html"><strong aria-hidden="true">7.1.</strong> Chapter 1 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_2_hints.html"><strong aria-hidden="true">7.2.</strong> Chapter 2 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_3_hints.html"><strong aria-hidden="true">7.3.</strong> Chapter 3 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_4_hints.html"><strong aria-hidden="true">7.4.</strong> Chapter 4 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_5_hints.html"><strong aria-hidden="true">7.5.</strong> Chapter 5 Hints</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="_introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="setup.html">Setup</a></li><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chunk Types</a></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Chunks</a></li><li class="chapter-item expanded "><a href="chapter_3.html" class="active"><strong aria-hidden="true">3.</strong> PNG Files</a></li><li class="chapter-item expanded "><a href="chapter_4.html"><strong aria-hidden="true">4.</strong> Command Line Arguments</a></li><li class="chapter-item expanded "><a href="chapter_5.html"><strong aria-hidden="true">5.</strong> Using Your Code to Write More Code</a></li><li class="chapter-item expanded "><a href="chapter_6.html"><strong aria-hidden="true">6.</strong> Next Steps</a></li><li class="chapter-item expanded "><a href="hints.html"><strong aria-hidden="true">7.</strong> Hints</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hints/chapter_1_hints.html"><strong aria-hidden="true">7.1.</strong> Chapter 1 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_2_hints.html"><strong aria-hidden="true">7.2.</strong> Chapter 2 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_3_hints.html"><strong aria-hidden="true">7.3.</strong> Chapter 3 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_4_hints.html"><strong aria-hidden="true">7.4.</strong> Chapter 4 Hints</a></li><li class="chapter-item expanded "><a href="hints/chapter_5_hints.html"><strong aria-hidden="true">7.5.</strong> Chapter 5 Hints</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,7 +147,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#chapter-3---png-files" id="chapter-3---png-files">Chapter 3 - PNG Files</a></h1>
+                        <h1><a class="header" href="#chapter-3-png-files" id="chapter-3-png-files">Chapter 3: PNG Files</a></h1>
 <p>You're finally ready to implement a full PNG file. It's very complicated.</p>
 <p>First you need a header containing 8 bytes that are always the same. Then you need a list of chunks.</p>
 <p>Ok maybe it's not that complicated.</p>
@@ -159,7 +159,7 @@ to make sure you're doing it right. If you're tired of reading that page, this i
 <p>You need to provide a constructor that takes a list of chunks, methods to append and remove chunks, and methods that return the header, a slice of all chunks, and the entire PNG file as a <code>Vec&lt;u8&gt;</code> of bytes.</p>
 <h2><a class="header" href="#requirements" id="requirements">Requirements</a></h2>
 <ol>
-<li>Copy the unit tests at the bottom of this page and paste them at the bottom of your <code>png.rs</code> file.</li>
+<li>Copy the unit tests below and paste them at the bottom of your <code>png.rs</code> file.</li>
 <li>Write a <code>Png</code> struct with your implementation of PNG files.</li>
 <li>In your <code>impl</code> block, add a public constant called <code>STANDARD_HEADER</code> that has the 8 standard header bytes.</li>
 <li>Implement <code>TryFrom&lt;&amp;[u8]&gt;</code> for your <code>Png</code>.</li>
@@ -588,8 +588,8 @@ mod tests {
 <li><a href="https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.enumerate">Iterator::enumerate</a></li>
 <li><a href="https://doc.rust-lang.org/std/iter/trait.Extend.html">std::iter::Extend</a></li>
 <li><a href="https://doc.rust-lang.org/std/io/trait.Read.html">std::io::Read</a></li>
-<li><a href="https://doc.rust-lang.org/std/io/trait.Read.html#method.read_exact">Read::read_exact</a></li>
 <li><a href="https://doc.rust-lang.org/std/io/struct.BufReader.html">std::io::BufReader</a></li>
+<li><a href="https://doc.rust-lang.org/std/io/trait.Read.html#method.read_exact">Read::read_exact</a></li>
 <li><a href="https://doc.rust-lang.org/std/primitive.u32.html#method.from_be_bytes">u32::from_be_bytes</a></li>
 </ul>
 
