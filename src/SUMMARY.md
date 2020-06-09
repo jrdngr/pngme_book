@@ -7,7 +7,7 @@
 - [Chunks](./chapter_2.md)
 - [PNG Files](./chapter_3.md)
 - [Command Line Arguments](./chapter_4.md)
-- [Using your code to write code](./chapter_5.md)
+- [Using Your Code to Write More Code](./chapter_5.md)
 - [Next Steps](./chapter_6.md)
 
 - [Hints](./hints.md)

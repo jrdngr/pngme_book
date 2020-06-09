@@ -1,8 +1,8 @@
-# Chapter 6 - Next Step
+# Chapter 6: Next Steps
 
 If you're reading this, hopefully you just got done posting a bunch of inappropriate messages to your company's Slack hidden inside innocent cat pictures. I know that's the first thing I did.
 
-So what's next?
+So what's next? Here are a few suggestions.
 
 
 ## If you want to keep working on this program
@@ -26,7 +26,7 @@ So what's next?
 ## If you like implementing a spec
  1. Implement a [CHIP-8 Interpreter](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM)
     * For real, go do this.
- 2. Implement PNG image decoding
+ 2. [Advent of Code 2019](https://adventofcode.com/2019) has a really fun sequence of challenges that have you build your own little code interpreter.
+    * This is more of a guided experience than diving into CHIP-8 if that's your thing  
+ 3. Implement PNG image decoding
     * Good luck
- 3. [Advent of Code 2019](https://adventofcode.com/2019) has a really fun sequence of challenges that have you build your own little code interpreter.
-    * This is more of a guided experience than diving into CHIP-8 if that's your thing 

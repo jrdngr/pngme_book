@@ -1,4 +1,4 @@
-# Chapter 5 - Using Your Code to Write More Code
+# Chapter 5: Using Your Code to Write More Code
 
 This is my favorite part.
 

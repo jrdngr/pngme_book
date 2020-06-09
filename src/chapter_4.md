@@ -1,10 +1,10 @@
-# Chapter 4 - Command Line Arguments
+# Chapter 4: Command Line Arguments
 
 If you made it this far, the hard part is over. Congrats!
 
 We're going to take a little detour right now and get our command line arguments set up. Having arguments set up will make it really easy to work on the last part of this project.
 
-You can parse command line arguments manually, but I highly recommend that you use a crate for this. [clap](https://github.com/clap-rs/clap) is your best bet for this. It does all of the work to make a nice command line interface for you. All you have to do is get your data out. 
+You can parse command line arguments manually, but I highly recommend that you use a crate for this. [clap](https://github.com/clap-rs/clap) is your best bet here. It does all of the work to make a nice command line interface for you. All you have to do is get your data out. 
 
 At the time of this writing, `clap` is integrating the derive macros from another fantastic crate called [structopt](https://github.com/TeXitoi/structopt). These macros make it trivial to map arguments to Rust types. You can check out version `3.0.0-beta.1` of `clap` to use these macros, or you can use `structopt`.
 

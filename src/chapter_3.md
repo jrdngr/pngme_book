@@ -1,4 +1,4 @@
-# Chapter 3 - PNG Files
+# Chapter 3: PNG Files
 
 You're finally ready to implement a full PNG file. It's very complicated.
 
@@ -19,7 +19,7 @@ You need to provide a constructor that takes a list of chunks, methods to append
 
 
 ## Requirements
-1. Copy the unit tests at the bottom of this page and paste them at the bottom of your `png.rs` file.
+1. Copy the unit tests below and paste them at the bottom of your `png.rs` file.
 2. Write a `Png` struct with your implementation of PNG files.
 3. In your `impl` block, add a public constant called `STANDARD_HEADER` that has the 8 standard header bytes.
 4. Implement `TryFrom<&[u8]>` for your `Png`.
@@ -51,6 +51,6 @@ You need to provide a constructor that takes a list of chunks, methods to append
 * [Iterator::enumerate](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.enumerate)
 * [std::iter::Extend](https://doc.rust-lang.org/std/iter/trait.Extend.html)
 * [std::io::Read](https://doc.rust-lang.org/std/io/trait.Read.html)
-* [Read::read_exact](https://doc.rust-lang.org/std/io/trait.Read.html#method.read_exact)
 * [std::io::BufReader](https://doc.rust-lang.org/std/io/struct.BufReader.html)
+* [Read::read_exact](https://doc.rust-lang.org/std/io/trait.Read.html#method.read_exact)
 * [u32::from_be_bytes](https://doc.rust-lang.org/std/primitive.u32.html#method.from_be_bytes)

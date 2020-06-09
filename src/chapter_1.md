@@ -1,4 +1,4 @@
-# Chapter 1 - Chunk Types
+# Chapter 1: Chunk Types
 
 Okay here we go!
 
@@ -26,7 +26,7 @@ You will also need to implement a few standard library traits.
 
 
 ## Requirements
-1. Copy the unit tests at the bottom of this page and paste them at the bottom of your `chunk_type.rs` file.
+1. Copy the unit tests below and paste them at the bottom of your `chunk_type.rs` file.
 2. Write a `ChunkType` struct with your implementation of PNG chunk types.
 3. Implement `TryFrom<[u8; 4]>` for your `ChunkType`.
 4. Implement `FromStr` for your `ChunkType`.

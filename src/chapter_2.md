@@ -1,4 +1,4 @@
-# Chapter 2 - Chunks
+# Chapter 2: Chunks
 
 Now that we've got our `ChunkType` struct, we can implement the rest of the our chunks. You'll be using the [PNG file structure spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html) again. Section `3.2` has all of the information you need.
 
@@ -20,7 +20,7 @@ You need to provide methods that return each of the four pieces of data, the chu
 
 
 ## Requirements
-1. Copy the unit tests at the bottom of this page and paste them at the bottom of your `chunk.rs` file.
+1. Copy the unit tests below and paste them at the bottom of your `chunk.rs` file.
 2. Write a `Chunk` struct with your implementation of PNG chunks.
 3. Implement `TryFrom<&[u8]>` for your `Chunk`.
 4. Implement `Display` for your `ChunkType`.
@@ -57,7 +57,7 @@ You need to provide methods that return each of the four pieces of data, the chu
 * [Iterator::copied](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.copied)
 * [std::slice::Iter](https://doc.rust-lang.org/std/slice/struct.Iter.html)
 * [std::io::Read](https://doc.rust-lang.org/std/io/trait.Read.html)
-* [Read::read_exact](https://doc.rust-lang.org/std/io/trait.Read.html#method.read_exact)
 * [std::io::BufReader](https://doc.rust-lang.org/std/io/struct.BufReader.html)
+* [Read::read_exact](https://doc.rust-lang.org/std/io/trait.Read.html#method.read_exact)
 * [u32::from_be_bytes](https://doc.rust-lang.org/std/primitive.u32.html#method.from_be_bytes)
 
