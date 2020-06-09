@@ -18,7 +18,7 @@ We're making a command line program that lets you hide secret messages in PNG fi
 3. Remove a message from a PNG file
 4. Print a list of PNG chunks that can be searched for messages
 
-If that sounds scary and beyond your ability then this tutorial is _definitely_ for you. If you know how to program and you know your Rust basics, you can totally do this. We're not going to implement any sort of image decoding. The part of the PNG spec we're tackling is surprisingly simple.
+If that sounds scary and beyond your ability then this guide is _definitely_ for you. If you know how to program and you know your Rust basics, you can totally do this. We're not going to implement any sort of image decoding. The part of the PNG spec we're tackling is surprisingly simple.
 
 
 ## How this works

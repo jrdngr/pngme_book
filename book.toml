@@ -3,4 +3,4 @@ authors = ["Jordan Grace"]
 language = "en"
 multilingual = false
 src = "src"
-title = "PNGme: An Intermediate Rust Tutorial"
+title = "PNGme: An Intermediate Rust Project"
