@@ -14,13 +14,13 @@ jobs:
           wget -q -O - 
           "https://github.com/rust-lang/mdBook/releases/download/v0.3.7/mdbook-v0.3.7-x86_64-unknown-linux-gnu.tar.gz" 
           | sudo tar xzf - -C /usr/local/bin
+      - name: Configure git
+        run: git config --global user.email "github-actions-bot@users.noreply.github.com" && git config --global user.name  "GitHub Actions"
       - name: Checking out
         uses: actions/checkout@master
       - name: Build
-        run: mdbook build -d docs
-      - name: Configure git
-        run: git config --global user.email "github-actions-bot@users.noreply.github.com" && git config --global user.name  "GitHub Actions"
-      - name: Commit Changes
-        run: git add . && git commit -m "Publishing changes"
-      - name: Publish
-        run:  git push "https://github.com/picklenerd/pngme_book"
+        run: mdbook build
+      - name: Changing to gh-pages branch
+        uses: actions/checkout@gh-pages
+      - name: Move files
+        run:  cp -r book/* ./ && rm -rf book
