@@ -25,4 +25,5 @@ jobs:
       - name: Move files
         run:  cp -r book/* ./ && rm -rf book
       - name: Push gh-pages branch
+        continue-on-error: true
         run: git add . && git commit -m "Publishing" && git push
