@@ -21,6 +21,6 @@ jobs:
       - name: Build
         run: mdbook build
       - name: Changing to gh-pages branch
-        run: git checkout gh-pages
+        run: git fetch && git checkout gh-pages
       - name: Move files
         run:  cp -r book/* ./ && rm -rf book
