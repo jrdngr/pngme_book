@@ -13,7 +13,7 @@ pub struct ChunkType {
 
 impl ChunkType {
     /// Returns the raw bytes contained in this chunk
-    pub fn bytes(&self) -> &[u8; 4] {
+    pub fn bytes(&self) -> [u8; 4] {
         todo!()
     }
 

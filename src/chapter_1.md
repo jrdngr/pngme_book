@@ -31,14 +31,15 @@ You will also need to implement a few standard library traits.
 3. Implement `TryFrom<[u8; 4]>` for your `ChunkType`.
 4. Implement `FromStr` for your `ChunkType`.
 5. Implement `Display` for your `ChunkType`.
-6. Required methods:
-   1. `fn bytes(&self) -> &[u8; 4]`
+6. Implement or derive `PartialEq` and `Eq` for your `ChunkType`
+7. Required methods:
+   1. `fn bytes(&self) -> [u8; 4]`
    2. `fn is_valid(&self) -> bool`
    3. `fn is_critical(&self) -> bool`
    4. `fn is_public(&self) -> bool`
    5. `fn is_reserved_bit_valid(&self) -> bool`
    6. `fn is_safe_to_copy(&self) -> bool` 
-7. Pass all of the unit tests.
+8. Pass all of the unit tests.
 
 
 ## Unit Tests
