@@ -6,7 +6,7 @@ mod tests {
 
     #[test]
     pub fn test_chunk_type_from_bytes() {
-        let expected = &[82, 117, 83, 116];
+        let expected = [82, 117, 83, 116];
         let actual = ChunkType::try_from([82, 117, 83, 116]).unwrap();
 
         assert_eq!(expected, actual.bytes());

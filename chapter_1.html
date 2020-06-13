@@ -167,9 +167,10 @@
 <li>Implement <code>TryFrom&lt;[u8; 4]&gt;</code> for your <code>ChunkType</code>.</li>
 <li>Implement <code>FromStr</code> for your <code>ChunkType</code>.</li>
 <li>Implement <code>Display</code> for your <code>ChunkType</code>.</li>
+<li>Implement or derive <code>PartialEq</code> and <code>Eq</code> for your <code>ChunkType</code></li>
 <li>Required methods:
 <ol>
-<li><code>fn bytes(&amp;self) -&gt; &amp;[u8; 4]</code></li>
+<li><code>fn bytes(&amp;self) -&gt; [u8; 4]</code></li>
 <li><code>fn is_valid(&amp;self) -&gt; bool</code></li>
 <li><code>fn is_critical(&amp;self) -&gt; bool</code></li>
 <li><code>fn is_public(&amp;self) -&gt; bool</code></li>
@@ -191,7 +192,7 @@ mod tests {
 
     #[test]
     pub fn test_chunk_type_from_bytes() {
-        let expected = &amp;[82, 117, 83, 116];
+        let expected = [82, 117, 83, 116];
         let actual = ChunkType::try_from([82, 117, 83, 116]).unwrap();
 
         assert_eq!(expected, actual.bytes());
