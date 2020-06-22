@@ -379,11 +379,21 @@ mod tests {
     use std::str::FromStr;
 
     fn testing_chunk() -&gt; Chunk {
-        let chunk_type = ChunkType::from_str(&quot;RuSt&quot;).unwrap();
-        let data: Vec&lt;u8&gt; = &quot;This is where your secret message will be!&quot;
-            .bytes()
+        let data_length: u32 = 42;
+        let chunk_type = &quot;RuSt&quot;.as_bytes();
+        let message_bytes = &quot;This is where your secret message will be!&quot;.as_bytes();
+        let crc: u32 = 2882656334;
+
+        let chunk_data: Vec&lt;u8&gt; = data_length
+            .to_be_bytes()
+            .iter()
+            .chain(chunk_type.iter())
+            .chain(message_bytes.iter())
+            .chain(crc.to_be_bytes().iter())
+            .copied()
             .collect();
-        Chunk::new(chunk_type, data)
+        
+        Chunk::try_from(chunk_data.as_ref()).unwrap()
     }
 
     #[test]
