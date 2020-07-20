@@ -316,7 +316,7 @@ mod tests {
         let chunk = ChunkType::from_str(&quot;Rust&quot;).unwrap();
         assert!(!chunk.is_valid());
 
-        let chunk = ChunkType::from_str(&quot;Ru1t&quot;);
+        let chunk = ChunkType::from_str(&quot;Ru1t&quot;).unwrap();
         assert!(chunk.is_err());
     }
 
