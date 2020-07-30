@@ -325,6 +325,14 @@ mod tests {
         let chunk = ChunkType::from_str(&quot;RuSt&quot;).unwrap();
         assert_eq!(&amp;chunk.to_string(), &quot;RuSt&quot;);
     }
+
+    #[test]
+    pub fn test_chunk_type_trait_impls() {
+        let chunk_type_1: ChunkType = TryFrom::try_from([82, 117, 83, 116]).unwrap();
+        let chunk_type_2: ChunkType = FromStr::from_str(&quot;RuSt&quot;).unwrap();
+        let _chunk_string = format!(&quot;{}&quot;, chunk_type_1);
+        let _are_chunks_equal = chunk_type_1 == chunk_type_2;
+    }
 }
 <span class="boring">}
 </span></code></pre></pre>
@@ -355,7 +363,7 @@ Your chunks should contain the four pieces of data laid out in section <code>3.2
 <li>Copy the unit tests below and paste them at the bottom of your <code>chunk.rs</code> file.</li>
 <li>Write a <code>Chunk</code> struct with your implementation of PNG chunks.</li>
 <li>Implement <code>TryFrom&lt;&amp;[u8]&gt;</code> for your <code>Chunk</code>.</li>
-<li>Implement <code>Display</code> for your <code>ChunkType</code>.</li>
+<li>Implement <code>Display</code> for your <code>Chunk</code>.</li>
 <li>Required methods:
 <ol>
 <li><code>fn length(&amp;self) -&gt; u32</code></li>
@@ -468,6 +476,27 @@ mod tests {
         let chunk = Chunk::try_from(chunk_data.as_ref());
 
         assert!(chunk.is_err());
+    }
+
+    #[test]
+    pub fn test_chunk_trait_impls() {
+        let data_length: u32 = 42;
+        let chunk_type = &quot;RuSt&quot;.as_bytes();
+        let message_bytes = &quot;This is where your secret message will be!&quot;.as_bytes();
+        let crc: u32 = 2882656334;
+
+        let chunk_data: Vec&lt;u8&gt; = data_length
+            .to_be_bytes()
+            .iter()
+            .chain(chunk_type.iter())
+            .chain(message_bytes.iter())
+            .chain(crc.to_be_bytes().iter())
+            .copied()
+            .collect();
+        
+        let chunk: Chunk = TryFrom::try_from(chunk_data.as_ref()).unwrap();
+        
+        let _chunk_string = format!(&quot;{}&quot;, chunk);
     }
 }
 <span class="boring">}
@@ -672,6 +701,24 @@ mod tests {
         let actual = png.as_bytes();
         let expected: Vec&lt;u8&gt; = PNG_FILE.iter().copied().collect();
         assert_eq!(actual, expected);
+    }
+
+    #[test]
+    fn test_png_trait_impls() {
+        let chunk_bytes: Vec&lt;u8&gt; = testing_chunks()
+            .into_iter()
+            .flat_map(|chunk| chunk.as_bytes())
+            .collect();
+
+        let bytes: Vec&lt;u8&gt; = Png::EXPECTED_HEADER
+            .iter()
+            .chain(chunk_bytes.iter())
+            .copied()
+            .collect();
+
+        let png: Png = TryFrom::try_from(bytes.as_ref()).unwrap();
+
+        let _png_string = format!(&quot;{}&quot;, png);
     }
 
     // This is the raw bytes for a shrunken version of the `dice.png` image on Wikipedia

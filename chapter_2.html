@@ -162,7 +162,7 @@ Your chunks should contain the four pieces of data laid out in section <code>3.2
 <li>Copy the unit tests below and paste them at the bottom of your <code>chunk.rs</code> file.</li>
 <li>Write a <code>Chunk</code> struct with your implementation of PNG chunks.</li>
 <li>Implement <code>TryFrom&lt;&amp;[u8]&gt;</code> for your <code>Chunk</code>.</li>
-<li>Implement <code>Display</code> for your <code>ChunkType</code>.</li>
+<li>Implement <code>Display</code> for your <code>Chunk</code>.</li>
 <li>Required methods:
 <ol>
 <li><code>fn length(&amp;self) -&gt; u32</code></li>
@@ -275,6 +275,27 @@ mod tests {
         let chunk = Chunk::try_from(chunk_data.as_ref());
 
         assert!(chunk.is_err());
+    }
+
+    #[test]
+    pub fn test_chunk_trait_impls() {
+        let data_length: u32 = 42;
+        let chunk_type = &quot;RuSt&quot;.as_bytes();
+        let message_bytes = &quot;This is where your secret message will be!&quot;.as_bytes();
+        let crc: u32 = 2882656334;
+
+        let chunk_data: Vec&lt;u8&gt; = data_length
+            .to_be_bytes()
+            .iter()
+            .chain(chunk_type.iter())
+            .chain(message_bytes.iter())
+            .chain(crc.to_be_bytes().iter())
+            .copied()
+            .collect();
+        
+        let chunk: Chunk = TryFrom::try_from(chunk_data.as_ref()).unwrap();
+        
+        let _chunk_string = format!(&quot;{}&quot;, chunk);
     }
 }
 <span class="boring">}
