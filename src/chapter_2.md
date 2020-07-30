@@ -23,7 +23,7 @@ You need to provide methods that return each of the four pieces of data, the chu
 1. Copy the unit tests below and paste them at the bottom of your `chunk.rs` file.
 2. Write a `Chunk` struct with your implementation of PNG chunks.
 3. Implement `TryFrom<&[u8]>` for your `Chunk`.
-4. Implement `Display` for your `ChunkType`.
+4. Implement `Display` for your `Chunk`.
 5. Required methods:
    1. `fn length(&self) -> u32`
    2. `fn chunk_type(&self) -> &ChunkType`
