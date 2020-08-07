@@ -78,7 +78,7 @@ mod tests {
         let chunk = ChunkType::from_str("Rust").unwrap();
         assert!(!chunk.is_valid());
 
-        let chunk = ChunkType::from_str("Ru1t").unwrap();
+        let chunk = ChunkType::from_str("Ru1t");
         assert!(chunk.is_err());
     }
 
