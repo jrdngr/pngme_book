@@ -335,7 +335,7 @@ mod tests {
             .flat_map(|chunk| chunk.as_bytes())
             .collect();
 
-        let bytes: Vec&lt;u8&gt; = Png::EXPECTED_HEADER
+        let bytes: Vec&lt;u8&gt; = Png::STANDARD_HEADER
             .iter()
             .chain(chunk_bytes.iter())
             .copied()
