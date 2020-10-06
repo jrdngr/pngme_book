@@ -30,3 +30,6 @@ So what's next? Here are a few suggestions.
     * This is more of a guided experience than diving into CHIP-8 if that's your thing  
  3. Implement PNG image decoding
     * Good luck
+
+## If you like this style of learning
+ 1. [Programming Projects for Advanced Beginners](https://robertheaton.com/2018/12/08/programming-projects-for-advanced-beginners/)
