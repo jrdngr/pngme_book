@@ -6,7 +6,7 @@ The toughest part of this assignment will be creating a chunk from a sequence of
 
 
 ### Calculating the CRC
-Check out [crc::crc32::checksum_ieee](https://docs.rs/crc/1.8.1/crc/crc32/fn.checksum_ieee.html) in the [crc](https://crates.io/crates/crc) crate. If you really want to implement this yourself, have at it. Your CRC needs to match the CRC that I get from the `crc` crate.
+Check out [crc::Crc::checksum](https://docs.rs/crc/2.1.0/crc/struct.Crc.html#method.checksum-1) in the [crc](https://crates.io/crates/crc) crate. If you really want to implement this yourself, have at it. Your CRC needs to match the CRC that I get from the `crc` crate.
 
 Don't forget to include the chunk type in your CRC calculation.
 
@@ -44,7 +44,7 @@ You need to provide methods that return each of the four pieces of data, the chu
 ## Resources
 * [PNG Spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Contents.html)
 * [crc](https://github.com/mrhooray/crc-rs)
-* [crc::crc32::checksum_ieee](https://docs.rs/crc/1.8.1/crc/crc32/fn.checksum_ieee.html)
+* [crc::Crc::checksum](https://docs.rs/crc/2.1.0/crc/struct.Crc.html#method.checksum-1)
 * [std::fmt::Display](https://doc.rust-lang.org/std/fmt/trait.Display.html)
 * [std::convert::TryFrom](https://doc.rust-lang.org/std/convert/trait.TryFrom.html)
 * [std::vec::Vec](https://doc.rust-lang.org/std/vec/struct.Vec.html)
