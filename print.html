@@ -352,7 +352,7 @@ mod tests {
 <p>Now that we've got our <code>ChunkType</code> struct, we can implement the rest of the our chunks. You'll be using the <a href="http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html">PNG file structure spec</a> again. Section <code>3.2</code> has all of the information you need.</p>
 <p>The toughest part of this assignment will be creating a chunk from a sequence of bytes using the <code>TryFrom</code> trait. Implementing the <code>as_bytes()</code> method may also be tricky depending on how much experience you have working with iterators. Check the hints for this chapter if you get stuck.</p>
 <h3><a class="header" href="#calculating-the-crc" id="calculating-the-crc">Calculating the CRC</a></h3>
-<p>Check out <a href="https://docs.rs/crc/1.8.1/crc/crc32/fn.checksum_ieee.html">crc::crc32::checksum_ieee</a> in the <a href="https://crates.io/crates/crc">crc</a> crate. If you really want to implement this yourself, have at it. Your CRC needs to match the CRC that I get from the <code>crc</code> crate.</p>
+<p>Check out <a href="https://docs.rs/crc/2.1.0/crc/struct.Crc.html#method.checksum-1">crc::Crc::checksum</a> in the <a href="https://crates.io/crates/crc">crc</a> crate. If you really want to implement this yourself, have at it. Your CRC needs to match the CRC that I get from the <code>crc</code> crate.</p>
 <p>Don't forget to include the chunk type in your CRC calculation.</p>
 <h2><a class="header" href="#assignment-1" id="assignment-1">Assignment</a></h2>
 <p>Using the <a href="http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html">PNG file structure spec</a>, implement PNG chunks.
@@ -505,7 +505,7 @@ mod tests {
 <ul>
 <li><a href="http://www.libpng.org/pub/png/spec/1.2/PNG-Contents.html">PNG Spec</a></li>
 <li><a href="https://github.com/mrhooray/crc-rs">crc</a></li>
-<li><a href="https://docs.rs/crc/1.8.1/crc/crc32/fn.checksum_ieee.html">crc::crc32::checksum_ieee</a></li>
+<li><a href="https://docs.rs/crc/2.1.0/crc/struct.Crc.html#method.checksum-1">crc::Crc::checksum</a></li>
 <li><a href="https://doc.rust-lang.org/std/fmt/trait.Display.html">std::fmt::Display</a></li>
 <li><a href="https://doc.rust-lang.org/std/convert/trait.TryFrom.html">std::convert::TryFrom</a></li>
 <li><a href="https://doc.rust-lang.org/std/vec/struct.Vec.html">std::vec::Vec</a></li>
