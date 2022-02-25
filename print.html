@@ -366,6 +366,7 @@ Your chunks should contain the four pieces of data laid out in section <code>3.2
 <li>Implement <code>Display</code> for your <code>Chunk</code>.</li>
 <li>Required methods:
 <ol>
+<li><code>fn new(chunk_type: ChunkType, data: Vec&lt;u8&gt;) -&gt; Chunk</code></li>
 <li><code>fn length(&amp;self) -&gt; u32</code></li>
 <li><code>fn chunk_type(&amp;self) -&gt; &amp;ChunkType</code></li>
 <li><code>fn data(&amp;self) -&gt; &amp;[u8]</code></li>
@@ -402,6 +403,15 @@ mod tests {
             .collect();
         
         Chunk::try_from(chunk_data.as_ref()).unwrap()
+    }
+
+    #[test]
+    fn test_new_chunk() {
+        let chunk_type = ChunkType::from_str(&quot;RuSt&quot;).unwrap();
+        let data = &quot;This is where your secret message will be!&quot;.as_bytes().to_vec();
+        let chunk = Chunk::new(chunk_type, data);
+        assert_eq!(chunk.length(), 42);
+        assert_eq!(chunk.crc(), 2882656334);
     }
 
     #[test]

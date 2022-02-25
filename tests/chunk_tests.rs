@@ -23,6 +23,15 @@ mod tests {
     }
 
     #[test]
+    fn test_new_chunk() {
+        let chunk_type = ChunkType::from_str("RuSt").unwrap();
+        let data = "This is where your secret message will be!".as_bytes().to_vec();
+        let chunk = Chunk::new(chunk_type, data);
+        assert_eq!(chunk.length(), 42);
+        assert_eq!(chunk.crc(), 2882656334);
+    }
+
+    #[test]
     fn test_chunk_length() {
         let chunk = testing_chunk();
         assert_eq!(chunk.length(), 42);
