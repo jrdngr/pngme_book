@@ -1,6 +1,6 @@
 # Chapter 2: Chunks
 
-Now that we've got our `ChunkType` struct, we can implement the rest of the our chunks. You'll be using the [PNG file structure spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html) again. Section `3.2` has all of the information you need.
+Now that we've got our `ChunkType` struct, we can implement the rest of our chunks. You'll be using the [PNG file structure spec](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html) again. Section `3.2` has all of the information you need.
 
 The toughest part of this assignment will be creating a chunk from a sequence of bytes using the `TryFrom` trait. Implementing the `as_bytes()` method may also be tricky depending on how much experience you have working with iterators. Check the hints for this chapter if you get stuck.
 
