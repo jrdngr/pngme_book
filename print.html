@@ -349,7 +349,7 @@ mod tests {
 <li><a href="https://doc.rust-lang.org/std/primitive.u8.html#method.is_ascii_uppercase">u8::is_acsii_uppercase</a></li>
 </ul>
 <h1><a class="header" href="#chapter-2-chunks" id="chapter-2-chunks">Chapter 2: Chunks</a></h1>
-<p>Now that we've got our <code>ChunkType</code> struct, we can implement the rest of the our chunks. You'll be using the <a href="http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html">PNG file structure spec</a> again. Section <code>3.2</code> has all of the information you need.</p>
+<p>Now that we've got our <code>ChunkType</code> struct, we can implement the rest of our chunks. You'll be using the <a href="http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html">PNG file structure spec</a> again. Section <code>3.2</code> has all of the information you need.</p>
 <p>The toughest part of this assignment will be creating a chunk from a sequence of bytes using the <code>TryFrom</code> trait. Implementing the <code>as_bytes()</code> method may also be tricky depending on how much experience you have working with iterators. Check the hints for this chapter if you get stuck.</p>
 <h3><a class="header" href="#calculating-the-crc" id="calculating-the-crc">Calculating the CRC</a></h3>
 <p>Check out <a href="https://docs.rs/crc/2.1.0/crc/struct.Crc.html#method.checksum-1">crc::Crc::checksum</a> in the <a href="https://crates.io/crates/crc">crc</a> crate. If you really want to implement this yourself, have at it. Your CRC needs to match the CRC that I get from the <code>crc</code> crate.</p>
