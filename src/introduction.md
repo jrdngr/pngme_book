@@ -42,5 +42,3 @@ For each chapter:
 8. If you can't figure it out, ask the internet. The Rust community is very helpful.
 
 Each chapter is already laid out in this order so it should be easy to follow.
-
-If you really really super duper want to see my code, you're gonna have to [send me your code](https://twitter.com/picklenrd) first.
