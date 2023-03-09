@@ -708,7 +708,7 @@ mod tests {
     fn test_as_bytes() {
         let png = Png::try_from(&amp;PNG_FILE[..]).unwrap();
         let actual = png.as_bytes();
-        let expected: Vec&lt;u8&gt; = PNG_FILE.iter().copied().collect();
+        let expected: Vec&lt;u8&gt; = PNG_FILE.to_vec();
         assert_eq!(actual, expected);
     }
 
