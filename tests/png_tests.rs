@@ -7,13 +7,11 @@ mod tests {
     use std::convert::TryFrom;
 
     fn testing_chunks() -> Vec<Chunk> {
-        let mut chunks = Vec::new();
-
-        chunks.push(chunk_from_strings("FrSt", "I am the first chunk").unwrap());
-        chunks.push(chunk_from_strings("miDl", "I am another chunk").unwrap());
-        chunks.push(chunk_from_strings("LASt", "I am the last chunk").unwrap());
-
-        chunks
+        vec![
+            chunk_from_strings("FrSt", "I am the first chunk").unwrap(),
+            chunk_from_strings("miDl", "I am another chunk").unwrap(),
+            chunk_from_strings("LASt", "I am the last chunk").unwrap(),
+        ]
     }
 
     fn testing_png() -> Png {

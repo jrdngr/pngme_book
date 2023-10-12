@@ -190,13 +190,11 @@ mod tests {
     use std::convert::TryFrom;
 
     fn testing_chunks() -&gt; Vec&lt;Chunk&gt; {
-        let mut chunks = Vec::new();
-
-        chunks.push(chunk_from_strings(&quot;FrSt&quot;, &quot;I am the first chunk&quot;).unwrap());
-        chunks.push(chunk_from_strings(&quot;miDl&quot;, &quot;I am another chunk&quot;).unwrap());
-        chunks.push(chunk_from_strings(&quot;LASt&quot;, &quot;I am the last chunk&quot;).unwrap());
-
-        chunks
+        vec![
+            chunk_from_strings(&quot;FrSt&quot;, &quot;I am the first chunk&quot;).unwrap(),
+            chunk_from_strings(&quot;miDl&quot;, &quot;I am another chunk&quot;).unwrap(),
+            chunk_from_strings(&quot;LASt&quot;, &quot;I am the last chunk&quot;).unwrap(),
+        ]
     }
 
     fn testing_png() -&gt; Png {
