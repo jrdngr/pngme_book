@@ -1,10 +1,10 @@
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::chunk_type::ChunkType;
     use crate::chunk::Chunk;
-    use std::str::FromStr;
+    use crate::chunk_type::ChunkType;
     use std::convert::TryFrom;
+    use std::str::FromStr;
 
     fn testing_chunks() -> Vec<Chunk> {
         vec![
@@ -89,11 +89,16 @@ mod tests {
 
         chunk_bytes.append(&mut bad_chunk);
 
-        let png = Png::try_from(chunk_bytes.as_ref());
+        let bytes: Vec<u8> = Png::STANDARD_HEADER
+            .iter()
+            .chain(chunk_bytes.iter())
+            .copied()
+            .collect();
+
+        let png = Png::try_from(bytes.as_ref());
 
         assert!(png.is_err());
     }
-
 
     #[test]
     fn test_list_chunks() {
@@ -108,7 +113,6 @@ mod tests {
         let chunk = png.chunk_by_type("FrSt").unwrap();
         assert_eq!(&chunk.chunk_type().to_string(), "FrSt");
         assert_eq!(&chunk.data_as_string().unwrap(), "I am the first chunk");
-
     }
 
     #[test]
