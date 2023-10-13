@@ -6,9 +6,9 @@ mod tests {
 
     fn testing_chunks() -> Vec<Chunk> {
         vec![
-            chunk_from_strings("FrSt", "I am the first chunk").unwrap(),
+            chunk_from_strings("FrST", "I am the first chunk").unwrap(),
             chunk_from_strings("miDl", "I am another chunk").unwrap(),
-            chunk_from_strings("LASt", "I am the last chunk").unwrap(),
+            chunk_from_strings("lAST", "I am the last chunk").unwrap(),
         ]
     }
 
@@ -106,26 +106,26 @@ mod tests {
     #[test]
     fn test_chunk_by_type() {
         let png = testing_png();
-        let chunk = png.chunk_by_type("FrSt").unwrap();
-        assert_eq!(&chunk.chunk_type().to_string(), "FrSt");
+        let chunk = png.chunk_by_type("FrST").unwrap();
+        assert_eq!(&chunk.chunk_type().to_string(), "FrST");
         assert_eq!(&chunk.data_as_string().unwrap(), "I am the first chunk");
     }
 
     #[test]
     fn test_append_chunk() {
         let mut png = testing_png();
-        png.append_chunk(chunk_from_strings("TeSt", "Message").unwrap());
-        let chunk = png.chunk_by_type("TeSt").unwrap();
-        assert_eq!(&chunk.chunk_type().to_string(), "TeSt");
+        png.append_chunk(chunk_from_strings("teSt", "Message").unwrap());
+        let chunk = png.chunk_by_type("teSt").unwrap();
+        assert_eq!(&chunk.chunk_type().to_string(), "teSt");
         assert_eq!(&chunk.data_as_string().unwrap(), "Message");
     }
 
     #[test]
     fn test_remove_chunk() {
         let mut png = testing_png();
-        png.append_chunk(chunk_from_strings("TeSt", "Message").unwrap());
-        png.remove_chunk("TeSt").unwrap();
-        let chunk = png.chunk_by_type("TeSt");
+        png.append_chunk(chunk_from_strings("teSt", "Message").unwrap());
+        png.remove_chunk("teSt").unwrap();
+        let chunk = png.chunk_by_type("teSt");
         assert!(chunk.is_none());
     }
 
