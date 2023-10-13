@@ -6,9 +6,8 @@ use std::path::Path;
 use std::str::FromStr;
 
 use crate::{Error, Result};
-
-pub use crate::chunk::Chunk;
-pub use crate::chunk_type::ChunkType;
+use crate::chunk::Chunk;
+use crate::chunk_type::ChunkType;
 
 /// A PNG container as described by the PNG spec
 /// http://www.libpng.org/pub/png/spec/1.2/PNG-Contents.html
@@ -82,15 +81,17 @@ impl fmt::Display for Png {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::chunk_type::ChunkType;
+    use crate::chunk::Chunk;
+    use std::str::FromStr;
+    use std::convert::TryFrom;
 
     fn testing_chunks() -> Vec<Chunk> {
-        let mut chunks = Vec::new();
-
-        chunks.push(chunk_from_strings("FrSt", "I am the first chunk").unwrap());
-        chunks.push(chunk_from_strings("miDl", "I am another chunk").unwrap());
-        chunks.push(chunk_from_strings("LASt", "I am the last chunk").unwrap());
-
-        chunks
+        vec![
+            chunk_from_strings("FrSt", "I am the first chunk").unwrap(),
+            chunk_from_strings("miDl", "I am another chunk").unwrap(),
+            chunk_from_strings("LASt", "I am the last chunk").unwrap(),
+        ]
     }
 
     fn testing_png() -> Png {
@@ -218,8 +219,26 @@ mod tests {
     fn test_as_bytes() {
         let png = Png::try_from(&PNG_FILE[..]).unwrap();
         let actual = png.as_bytes();
-        let expected: Vec<u8> = PNG_FILE.iter().copied().collect();
+        let expected: Vec<u8> = PNG_FILE.to_vec();
         assert_eq!(actual, expected);
+    }
+
+    #[test]
+    fn test_png_trait_impls() {
+        let chunk_bytes: Vec<u8> = testing_chunks()
+            .into_iter()
+            .flat_map(|chunk| chunk.as_bytes())
+            .collect();
+
+        let bytes: Vec<u8> = Png::STANDARD_HEADER
+            .iter()
+            .chain(chunk_bytes.iter())
+            .copied()
+            .collect();
+
+        let png: Png = TryFrom::try_from(bytes.as_ref()).unwrap();
+
+        let _png_string = format!("{}", png);
     }
 
     // This is the raw bytes for a shrunken version of the `dice.png` image on Wikipedia
