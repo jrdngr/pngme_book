@@ -1,6 +1,5 @@
 use std::convert::TryFrom;
 use std::fs;
-use std::str::FromStr;
 
 use crate::{Error, Result};
 use crate::args::{DecodeArgs, EncodeArgs, PrintArgs, RemoveArgs};

@@ -3,7 +3,6 @@ use std::fmt;
 use std::fs;
 use std::io::{BufReader, Read};
 use std::path::Path;
-use std::str::FromStr;
 
 use crate::{Error, Result};
 use crate::chunk::Chunk;

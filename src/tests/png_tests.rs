@@ -3,8 +3,6 @@ mod tests {
     use super::*;
     use crate::chunk::Chunk;
     use crate::chunk_type::ChunkType;
-    use std::convert::TryFrom;
-    use std::str::FromStr;
 
     fn testing_chunks() -> Vec<Chunk> {
         vec![
@@ -20,9 +18,7 @@ mod tests {
     }
 
     fn chunk_from_strings(chunk_type: &str, data: &str) -> Result<Chunk> {
-        use std::str::FromStr;
-
-        let chunk_type = ChunkType::from_str(chunk_type)?;
+        let chunk_type: ChunkType = chunk_type.parse()?;
         let data: Vec<u8> = data.bytes().collect();
 
         Ok(Chunk::new(chunk_type, data))
@@ -160,7 +156,8 @@ mod tests {
             .copied()
             .collect();
 
-        let png: Png = TryFrom::try_from(bytes.as_ref()).unwrap();
+        let bytes_ref: &[u8] = bytes.as_ref();
+        let png: Png = bytes_ref.try_into().unwrap();
 
         let _png_string = format!("{}", png);
     }
