@@ -74,7 +74,6 @@ impl fmt::Display for Chunk {
 mod tests {
     use super::*;
     use crate::chunk_type::ChunkType;
-    use std::str::FromStr;
 
     fn testing_chunk() -> Chunk {
         let data_length: u32 = 42;
@@ -96,7 +95,7 @@ mod tests {
 
     #[test]
     fn test_new_chunk() {
-        let chunk_type = ChunkType::from_str("RuSt").unwrap();
+        let chunk_type: ChunkType = "RuSt".parse().unwrap();
         let data = "This is where your secret message will be!".as_bytes().to_vec();
         let chunk = Chunk::new(chunk_type, data);
         assert_eq!(chunk.length(), 42);
