@@ -1,0 +1,38 @@
+#! /bin/sh
+
+code_src=${1:-code/src}
+
+[ -d ".git" -a -r "book.toml" -a -r "src/tests/chunk_type_tests.rs" ] \
+  || { echo "Run this from the top level of the sources" >&2; exit 2; }
+
+[ -r "$code_src/chunk_type.rs" ] \
+  || { echo "Can't find sources in '$code_src'" >&2; exit 2; }
+
+if [ $# -eq 0 ]; then
+  for stubs in src/stubs/*_full.rs src/stubs/*_stubs.rs; do
+    base=$(basename "$stubs")
+    base=${base%_full.rs}
+    base=${base%_stubs.rs}
+    out=$code_src/$base.rs
+    echo "Setting $out to $stubs"
+    cp "$stubs" "$out"
+    if [ -r src/tests/${base}_tests.rs ]; then
+      printf "\n%s\n" '#[cfg(test)]' >> "$out"
+    fi
+  done
+fi
+
+for tests in src/tests/*_tests.rs; do
+  base=$code_src/$(basename "$tests")
+  base=${base%_tests.rs}
+  out=$base.rs
+  echo "Updating $out with $tests"
+  sed -i -n \
+    "
+      /^#\[cfg(test)]/ {
+        r $tests
+        q
+      }
+      p
+    " "$out"
+  done

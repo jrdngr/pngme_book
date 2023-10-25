@@ -3,12 +3,10 @@ use std::fmt;
 use std::fs;
 use std::io::{BufReader, Read};
 use std::path::Path;
-use std::str::FromStr;
 
 use crate::{Error, Result};
-
-pub use crate::chunk::Chunk;
-pub use crate::chunk_type::ChunkType;
+use crate::chunk::Chunk;
+use crate::chunk_type::ChunkType;
 
 /// A PNG container as described by the PNG spec
 /// http://www.libpng.org/pub/png/spec/1.2/PNG-Contents.html
@@ -82,15 +80,15 @@ impl fmt::Display for Png {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::chunk::Chunk;
+    use crate::chunk_type::ChunkType;
 
     fn testing_chunks() -> Vec<Chunk> {
-        let mut chunks = Vec::new();
-
-        chunks.push(chunk_from_strings("FrSt", "I am the first chunk").unwrap());
-        chunks.push(chunk_from_strings("miDl", "I am another chunk").unwrap());
-        chunks.push(chunk_from_strings("LASt", "I am the last chunk").unwrap());
-
-        chunks
+        vec![
+            chunk_from_strings("FrST", "I am the first chunk").unwrap(),
+            chunk_from_strings("miDl", "I am another chunk").unwrap(),
+            chunk_from_strings("lAST", "I am the last chunk").unwrap(),
+        ]
     }
 
     fn testing_png() -> Png {
@@ -99,9 +97,7 @@ mod tests {
     }
 
     fn chunk_from_strings(chunk_type: &str, data: &str) -> Result<Chunk> {
-        use std::str::FromStr;
-
-        let chunk_type = ChunkType::from_str(chunk_type)?;
+        let chunk_type: ChunkType = chunk_type.parse()?;
         let data: Vec<u8> = data.bytes().collect();
 
         Ok(Chunk::new(chunk_type, data))
@@ -168,11 +164,16 @@ mod tests {
 
         chunk_bytes.append(&mut bad_chunk);
 
-        let png = Png::try_from(chunk_bytes.as_ref());
+        let bytes: Vec<u8> = Png::STANDARD_HEADER
+            .iter()
+            .chain(chunk_bytes.iter())
+            .copied()
+            .collect();
+
+        let png = Png::try_from(bytes.as_ref());
 
         assert!(png.is_err());
     }
-
 
     #[test]
     fn test_list_chunks() {
@@ -184,27 +185,26 @@ mod tests {
     #[test]
     fn test_chunk_by_type() {
         let png = testing_png();
-        let chunk = png.chunk_by_type("FrSt").unwrap();
-        assert_eq!(&chunk.chunk_type().to_string(), "FrSt");
+        let chunk = png.chunk_by_type("FrST").unwrap();
+        assert_eq!(&chunk.chunk_type().to_string(), "FrST");
         assert_eq!(&chunk.data_as_string().unwrap(), "I am the first chunk");
-
     }
 
     #[test]
     fn test_append_chunk() {
         let mut png = testing_png();
-        png.append_chunk(chunk_from_strings("TeSt", "Message").unwrap());
-        let chunk = png.chunk_by_type("TeSt").unwrap();
-        assert_eq!(&chunk.chunk_type().to_string(), "TeSt");
+        png.append_chunk(chunk_from_strings("teSt", "Message").unwrap());
+        let chunk = png.chunk_by_type("teSt").unwrap();
+        assert_eq!(&chunk.chunk_type().to_string(), "teSt");
         assert_eq!(&chunk.data_as_string().unwrap(), "Message");
     }
 
     #[test]
     fn test_remove_chunk() {
         let mut png = testing_png();
-        png.append_chunk(chunk_from_strings("TeSt", "Message").unwrap());
-        png.remove_chunk("TeSt").unwrap();
-        let chunk = png.chunk_by_type("TeSt");
+        png.append_chunk(chunk_from_strings("teSt", "Message").unwrap());
+        png.remove_chunk("teSt").unwrap();
+        let chunk = png.chunk_by_type("teSt");
         assert!(chunk.is_none());
     }
 
@@ -218,8 +218,27 @@ mod tests {
     fn test_as_bytes() {
         let png = Png::try_from(&PNG_FILE[..]).unwrap();
         let actual = png.as_bytes();
-        let expected: Vec<u8> = PNG_FILE.iter().copied().collect();
+        let expected: Vec<u8> = PNG_FILE.to_vec();
         assert_eq!(actual, expected);
+    }
+
+    #[test]
+    fn test_png_trait_impls() {
+        let chunk_bytes: Vec<u8> = testing_chunks()
+            .into_iter()
+            .flat_map(|chunk| chunk.as_bytes())
+            .collect();
+
+        let bytes: Vec<u8> = Png::STANDARD_HEADER
+            .iter()
+            .chain(chunk_bytes.iter())
+            .copied()
+            .collect();
+
+        let bytes_ref: &[u8] = bytes.as_ref();
+        let png: Png = bytes_ref.try_into().unwrap();
+
+        let _png_string = format!("{}", png);
     }
 
     // This is the raw bytes for a shrunken version of the `dice.png` image on Wikipedia
