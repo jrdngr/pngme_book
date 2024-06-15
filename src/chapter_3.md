@@ -27,7 +27,7 @@ You need to provide a constructor that takes a list of chunks, methods to append
 6. Required methods:
    1. `fn from_chunks(chunks: Vec<Chunk>) -> Png`
    2. `fn append_chunk(&mut self, chunk: Chunk)`
-   3. `fn remove_chunk(&mut self, chunk_type: &str) -> Result<Chunk>`
+   3. `fn remove_first_chunk(&mut self, chunk_type: &str) -> Result<Chunk>`
    4. `fn header(&self) -> &[u8; 8]`
    5. `fn chunks(&self) -> &[Chunk]`
    6. `fn chunk_by_type(&self, chunk_type: &str) -> Option<&Chunk>`
