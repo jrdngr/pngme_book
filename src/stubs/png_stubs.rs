@@ -37,7 +37,7 @@ impl Png {
 
     /// Searches for a `Chunk` with the specified `chunk_type` and removes the first
     /// matching `Chunk` from this `Png` list of chunks.
-    pub fn remove_chunk(&mut self, chunk_type: &str) -> Result<Chunk> {
+    pub fn remove_first_chunk(&mut self, chunk_type: &str) -> Result<Chunk> {
         todo!()
     }
 

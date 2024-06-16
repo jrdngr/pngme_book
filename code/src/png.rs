@@ -38,7 +38,7 @@ impl Png {
 
     /// Searches for a `Chunk` with the specified `chunk_type` and removes the first
     /// matching `Chunk` from this `Png` list of chunks.
-    pub fn remove_chunk(&mut self, chunk_type: &str) -> Result<Chunk> {
+    pub fn remove_first_chunk(&mut self, chunk_type: &str) -> Result<Chunk> {
         todo!()
     }
 
@@ -200,10 +200,10 @@ mod tests {
     }
 
     #[test]
-    fn test_remove_chunk() {
+    fn test_remove_first_chunk() {
         let mut png = testing_png();
         png.append_chunk(chunk_from_strings("TeSt", "Message").unwrap());
-        png.remove_chunk("TeSt").unwrap();
+        png.remove_first_chunk("TeSt").unwrap();
         let chunk = png.chunk_by_type("TeSt");
         assert!(chunk.is_none());
     }
