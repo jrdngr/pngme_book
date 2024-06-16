@@ -121,10 +121,10 @@ mod tests {
     }
 
     #[test]
-    fn test_remove_chunk() {
+    fn test_remove_first_chunk() {
         let mut png = testing_png();
         png.append_chunk(chunk_from_strings("TeSt", "Message").unwrap());
-        png.remove_chunk("TeSt").unwrap();
+        png.remove_first_chunk("TeSt").unwrap();
         let chunk = png.chunk_by_type("TeSt");
         assert!(chunk.is_none());
     }

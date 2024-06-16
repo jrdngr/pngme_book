@@ -168,7 +168,7 @@ to make sure you're doing it right. If you're tired of reading that page, this i
 <ol>
 <li><code>fn from_chunks(chunks: Vec&lt;Chunk&gt;) -&gt; Png</code></li>
 <li><code>fn append_chunk(&amp;mut self, chunk: Chunk)</code></li>
-<li><code>fn remove_chunk(&amp;mut self, chunk_type: &amp;str) -&gt; Result&lt;Chunk&gt;</code></li>
+<li><code>fn remove_first_chunk(&amp;mut self, chunk_type: &amp;str) -&gt; Result&lt;Chunk&gt;</code></li>
 <li><code>fn header(&amp;self) -&gt; &amp;[u8; 8]</code></li>
 <li><code>fn chunks(&amp;self) -&gt; &amp;[Chunk]</code></li>
 <li><code>fn chunk_by_type(&amp;self, chunk_type: &amp;str) -&gt; Option&lt;&amp;Chunk&gt;</code></li>
@@ -304,10 +304,10 @@ mod tests {
     }
 
     #[test]
-    fn test_remove_chunk() {
+    fn test_remove_first_chunk() {
         let mut png = testing_png();
         png.append_chunk(chunk_from_strings(&quot;TeSt&quot;, &quot;Message&quot;).unwrap());
-        png.remove_chunk(&quot;TeSt&quot;).unwrap();
+        png.remove_first_chunk(&quot;TeSt&quot;).unwrap();
         let chunk = png.chunk_by_type(&quot;TeSt&quot;);
         assert!(chunk.is_none());
     }
