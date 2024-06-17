@@ -2,4 +2,6 @@
 
 [PNGme: An Intermediate Rust Project](https://jrdngr.github.io/pngme_book/)
 
-Feel free to do whatever you want with this book, its associated code, and any other code you write based on the project outlined within. You do not need to credit me in any way.
+This book and repo are not maintained. If you're at an appropriate level for this project, you should be able make any necessary modifications to the provided tests for anything that doesn't work with newer versions of Rust or any referenced libraries.
+
+Feel free to fork this and do whatever you want with it. You do not need to credit me in any way.
