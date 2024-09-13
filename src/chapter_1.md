@@ -8,7 +8,7 @@ In this chapter, we'll be implementing chunk types. These are pretty easy since 
 
 ### A little bit about bytes
 
-I keep saying that chunk types are strings, but you'll want to think about them in terms of bytes. If you've never worked directly with bytes before, it's not that scary. If you _have_ worked directly with bytes before, you can skip to the [Assignment](#assignment) section below.
+I keep saying that chunk types are strings, but you'll want to think about them in terms of bytes. If you've never worked directly with bytes before, it's not that scary. If you _have_ worked directly with bytes before, you can skip straight to the [Assignment](#assignment) section below.
 
 A bit is a `0` or a `1`. A byte is 8 bits. In decimal notation, a byte is a number in the range 0 to 255. You've probably heard that computers only understand 1's and 0's. While that's kinda true, they generally communicate using bytes. In Rust, bytes are represented by the type `u8`.
 
