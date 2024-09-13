@@ -44,7 +44,7 @@ You will also need to implement a few standard library traits.
 
 ## Unit Tests
 
-```rust
+```rust,no_run
 {{#include tests/chunk_type_tests.rs}}
 ```
 
