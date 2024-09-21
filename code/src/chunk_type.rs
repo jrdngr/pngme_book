@@ -13,7 +13,7 @@ pub struct ChunkType {
 
 impl ChunkType {
     /// Returns the raw bytes contained in this chunk
-    pub fn bytes(&self) -> &[u8; 4] {
+    pub fn bytes(&self) -> [u8; 4] {
         todo!()
     }
 
@@ -74,10 +74,12 @@ impl FromStr for ChunkType {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use std::convert::TryFrom;
+    use std::str::FromStr;
 
     #[test]
     pub fn test_chunk_type_from_bytes() {
-        let expected = &[82, 117, 83, 116];
+        let expected = [82, 117, 83, 116];
         let actual = ChunkType::try_from([82, 117, 83, 116]).unwrap();
 
         assert_eq!(expected, actual.bytes());
@@ -157,5 +159,13 @@ mod tests {
     pub fn test_chunk_type_string() {
         let chunk = ChunkType::from_str("RuSt").unwrap();
         assert_eq!(&chunk.to_string(), "RuSt");
+    }
+
+    #[test]
+    pub fn test_chunk_type_trait_impls() {
+        let chunk_type_1: ChunkType = TryFrom::try_from([82, 117, 83, 116]).unwrap();
+        let chunk_type_2: ChunkType = FromStr::from_str("RuSt").unwrap();
+        let _chunk_string = format!("{}", chunk_type_1);
+        let _are_chunks_equal = chunk_type_1 == chunk_type_2;
     }
 }
