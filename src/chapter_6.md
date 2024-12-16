@@ -29,7 +29,8 @@ So what's next? Here are a few suggestions.
  2. [Advent of Code 2019](https://adventofcode.com/2019) has a really fun sequence of challenges that have you build your own little code interpreter.
     * This is more of a guided experience than diving into CHIP-8 if that's your thing  
  3. Implement PNG image decoding
-    * Good luck
+    * Image data is compressed with DEFLATE algorithm. You need to decompress it, and then apply one of 4 PNG filters depending on the image.
+    * You can start off by using an existing DEFLATE implementation such as [flate2](https://crates.io/crates/flate2) and implement the filters by yourself.
 
 ## If you like this style of learning
  1. [Programming Projects for Advanced Beginners](https://robertheaton.com/2018/12/08/programming-projects-for-advanced-beginners/)
